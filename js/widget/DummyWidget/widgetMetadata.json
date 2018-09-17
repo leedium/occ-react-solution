@@ -1,0 +1,166 @@
+{
+  "config": {},
+  "imports": [],
+  "minWidth": 1,
+  "availableToAllPages": true,
+  "version": 1,
+  "jsEditable": true,
+  "translations": [
+    {
+      "language": "ar",
+      "name": "DummyWidget [ar]"
+    },
+    {
+      "language": "bg",
+      "name": "DummyWidget [bg]"
+    },
+    {
+      "language": "fr_CA",
+      "name": "DummyWidget [fr_CA]"
+    },
+    {
+      "language": "zh_CN",
+      "name": "DummyWidget [zh_CN]"
+    },
+    {
+      "language": "zh_TW",
+      "name": "DummyWidget [zh_TW]"
+    },
+    {
+      "language": "hr",
+      "name": "DummyWidget [hr]"
+    },
+    {
+      "language": "cs",
+      "name": "DummyWidget [cs]"
+    },
+    {
+      "language": "da",
+      "name": "DummyWidget [da]"
+    },
+    {
+      "language": "nl",
+      "name": "DummyWidget [nl]"
+    },
+    {
+      "language": "en",
+      "name": "DummyWidget"
+    },
+    {
+      "language": "en_AU",
+      "name": "DummyWidget [en_AU]"
+    },
+    {
+      "language": "en_CA",
+      "name": "DummyWidget [en_CA]"
+    },
+    {
+      "language": "en_GB",
+      "name": "DummyWidget [en_GB]"
+    },
+    {
+      "language": "en_US",
+      "name": "DummyWidget [en_US]"
+    },
+    {
+      "language": "et",
+      "name": "DummyWidget [et]"
+    },
+    {
+      "language": "fi",
+      "name": "DummyWidget [fi]"
+    },
+    {
+      "language": "fr",
+      "name": "DummyWidget [fr]"
+    },
+    {
+      "language": "de",
+      "name": "DummyWidget [de]"
+    },
+    {
+      "language": "el",
+      "name": "DummyWidget [el]"
+    },
+    {
+      "language": "hu",
+      "name": "DummyWidget [hu]"
+    },
+    {
+      "language": "it",
+      "name": "DummyWidget [it]"
+    },
+    {
+      "language": "ja",
+      "name": "DummyWidget [ja]"
+    },
+    {
+      "language": "ko",
+      "name": "DummyWidget [ko]"
+    },
+    {
+      "language": "lv",
+      "name": "DummyWidget [lv]"
+    },
+    {
+      "language": "lt",
+      "name": "DummyWidget [lt]"
+    },
+    {
+      "language": "no",
+      "name": "DummyWidget [no]"
+    },
+    {
+      "language": "pl",
+      "name": "DummyWidget [pl]"
+    },
+    {
+      "language": "pt",
+      "name": "DummyWidget [pt]"
+    },
+    {
+      "language": "pt_BR",
+      "name": "DummyWidget [pt_BR]"
+    },
+    {
+      "language": "ro",
+      "name": "DummyWidget [ro]"
+    },
+    {
+      "language": "ru",
+      "name": "DummyWidget [ru]"
+    },
+    {
+      "language": "sr",
+      "name": "DummyWidget [sr]"
+    },
+    {
+      "language": "sr_Latn",
+      "name": "DummyWidget [sr_Latn]"
+    },
+    {
+      "language": "sl",
+      "name": "DummyWidget [sl]"
+    },
+    {
+      "language": "es",
+      "name": "DummyWidget [es]"
+    },
+    {
+      "language": "sv",
+      "name": "DummyWidget [sv]"
+    },
+    {
+      "language": "th",
+      "name": "DummyWidget [th]"
+    },
+    {
+      "language": "tr",
+      "name": "DummyWidget [tr]"
+    },
+    {
+      "language": "uk",
+      "name": "DummyWidget [uk]"
+    }
+  ]
+}

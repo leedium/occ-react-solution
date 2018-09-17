@@ -1,0 +1,10 @@
+{
+  "global":false,
+  "availableToAllPages": true,
+  "version":1,
+  "javascript":"main",
+  "i18nresources":"reactHomeRoot",
+  "jsEditable":true,
+  "name": "reactHomeRoot",
+  "imports": ["product", "pageContext", "site", "loaded", "imageRootUrl", "productVariantOptions", "cart", "links", "productTypes", "passwordPolicies", "user"]
+}
