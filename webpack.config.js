@@ -14,6 +14,8 @@ const config = {
   externals: {
     'knockout': 'knockout',
     'jquery': 'jquery',
+    'pubsub': 'pubsub',
+    'ccConstants': 'ccConstants',
   },
   devServer: {
     hot: true,

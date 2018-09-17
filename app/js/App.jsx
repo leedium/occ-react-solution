@@ -9,17 +9,25 @@ const root = document.createElement('div');
 root.id = 'root';
 document.body.appendChild(root);
 
-define(['knockout', 'jquery'],
-  (ko, $) =>
+define([
+    'knockout',
+    'jquery',
+    'pubsub',
+    'ccConstants'
+  ],
+  (
+    ko,
+    $,
+    pubsub,
+    ccConstants
+  ) =>
     ({
       onLoad: (widget) => {
-        console.log(widget);
+        console.log(widget, pubsub, ccConstants);
         ReactDOM.render(
-            <div>HELLO</div>,
-            document.getElementById('main')
+          <div>HELLO</div>,
+          document.getElementById('main')
         );
-
-
       }
     })
 );
