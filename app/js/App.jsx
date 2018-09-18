@@ -3,6 +3,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Index from './index';
+
 
 //  artificially create container
 const root = document.createElement('div');
@@ -13,21 +15,27 @@ define([
     'knockout',
     'jquery',
     'pubsub',
-    'ccConstants'
+    'ccConstants',
+    'navigation'
   ],
   (
     ko,
     $,
     pubsub,
-    ccConstants
+    ccConstants,
+    navigation
   ) =>
     ({
       onLoad: (widget) => {
-        console.log(widget, pubsub, ccConstants);
+        console.log(widget, pubsub, ccConstants, navigation);
+        console.log(ko.toJS(widget));
         ReactDOM.render(
-          <div>HELLO</div>,
+          <Index pageName={'TEST'}/>,
           document.getElementById('main')
         );
+        $.Topic('PAGE_CHANGED', pageContext => {
+          console.log(pageContext)
+        });
       }
     })
 );

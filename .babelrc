@@ -1,7 +1,7 @@
 {
   "presets": [
     "es2015",
-    "react",
+    "flow",
     ["env", {
       "targets": {
         "browsers": "last 2 versions"

@@ -16,6 +16,8 @@ const config = {
     'jquery': 'jquery',
     'pubsub': 'pubsub',
     'ccConstants': 'ccConstants',
+    'ccConstants': 'ccConstants',
+    'navigation': 'navigation',
   },
   devServer: {
     hot: true,
@@ -23,7 +25,11 @@ const config = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      react: 'preact-compat',
+      'react-dom': 'preact-compat'
+    }
   },
   stats: {
     colors: true,
@@ -55,7 +61,7 @@ const config = {
             'transform-es2015-modules-commonjs'
           ]
         },
-        include: [path.resolve('app/js')]
+        include: [path.resolve('app/js'), path.resolve('node_modules/preact-compat/src')]
       }
     ]
   }
