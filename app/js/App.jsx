@@ -24,19 +24,25 @@ define([
     pubsub,
     ccConstants,
     navigation
-  ) =>
-    ({
+  ) => {
+
+    const dependencies = {ko, $, pubsub, ccConstants, navigation};
+
+    return ({
       onLoad: (widget) => {
         console.log(widget, pubsub, ccConstants, navigation);
         console.log(ko.toJS(widget));
-        ReactDOM.render(
-          <Index pageName={'TEST'}/>,
-          document.getElementById('main')
-        );
-        $.Topic('PAGE_CHANGED', pageContext => {
-          console.log(pageContext)
+
+        $.Topic(pubsub.topicNames.PAGE_VIEW_CHANGED).subscribe( pageContext => {
+          console.log(widget,pageContext)
         });
+
+        ReactDOM.render(
+          <Index pageName={'TEST'} occProps={dependencies} />,
+          document.getElementById('root')
+        );
       }
     })
+  }
 );
 

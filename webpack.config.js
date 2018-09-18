@@ -58,7 +58,8 @@ const config = {
           ],
           plugins: [
             'add-module-exports',
-            'transform-es2015-modules-commonjs'
+            'transform-es2015-modules-commonjs',
+            'transform-class-properties'
           ]
         },
         include: [path.resolve('app/js'), path.resolve('node_modules/preact-compat/src')]

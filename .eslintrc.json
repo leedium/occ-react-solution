@@ -1,13 +1,13 @@
 {
   "extends": [
-    "plugin:flowtype/recommended",
     "airbnb",
     "prettier",
-    "prettier/react"
+    "prettier/react",
+    "plugin:react/recommended"
   ],
   "plugins": [
-    "flowtype",
-    "prettier"
+    "prettier",
+    "react"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -24,6 +24,9 @@
     "jest": true
   },
   "rules": {
-    "import/no-unresolved": [2, {"amd": true}]
+    "import/no-unresolved": [2, {"amd": true}],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars":  "error",
+    "no-debugger": 0
   }
 }

@@ -11,15 +11,10 @@
     }]
   ],
   "plugins": [
-    "add-module-exports"
-  ],
-  "env": {
-    "test": {
-      "plugins":[
-        "transform-es2015-modules-commonjs",
-      ]
-    }
-  }
+    "add-module-exports",
+    "transform-es2015-modules-commonjs",
+    "transform-class-properties"
+  ]
 }
 
 
