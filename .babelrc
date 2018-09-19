@@ -1,0 +1,20 @@
+{
+  "presets": [
+    "es2015",
+    "flow",
+    ["env", {
+      "targets": {
+        "browsers": "last 2 versions"
+      },
+      "loose": true,
+      "modules" : "amd"
+    }]
+  ],
+  "plugins": [
+    "add-module-exports",
+    "transform-es2015-modules-commonjs",
+    "transform-class-properties"
+  ]
+}
+
+
