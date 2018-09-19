@@ -1,0 +1,9 @@
+{
+  "widgetType": "globalwidgettest",
+  "version": 1,
+  "displayName": "Global Widget Test",
+  "javascript": "globalwidgettest",
+  "global": true,
+  "source": 101,
+  "i18nresources": "globalwidgettest"
+}
