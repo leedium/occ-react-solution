@@ -1,9 +1,0 @@
-{
-  "widgetType": "globalwidget",
-  "version": 1,
-  "displayName": "GlobalWidget",
-  "javascript": "globalwidget",
-  "global": true,
-  "source": 101,
-  "repositoryId": "globalwidget_v1"
-}
