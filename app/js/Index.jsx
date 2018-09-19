@@ -1,19 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-import Components from './components/Components';
+import RouterListener from './router/RouterListener';
+import Home from './pages/Home'
+import DLTest from "./pages/DLTest";
 
 function Index (props) {
-  const OCCLink = Components.OCCLink('cart','Hello',props.occProps.navigation);
   return (
     <Router>
-      <OCCLink />
+      <RouterListener {...props}>
+        <div>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/dltest" component={DLTest}/>
+        </div>
+      </RouterListener>
     </Router>
   )
 }
 Index.propTypes = {
-  occProps:PropTypes.shape.isRequired
+  occProps:PropTypes.any.isRequired
 };
 
 export default Index;

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter, Route} from 'react-router-dom'
 
 import Index from './index';
 
@@ -9,7 +10,7 @@ import Index from './index';
 //  artificially create container
 const root = document.createElement('div');
 root.id = 'root';
-document.body.appendChild(root);
+document.body.prepend(root);
 
 define([
     'knockout',
@@ -21,19 +22,19 @@ define([
   (
     ko,
     $,
-    pubsub,
-    ccConstants,
+    PubSub,
+    CCConstants,
     navigation
   ) => {
 
-    const dependencies = {ko, $, pubsub, ccConstants, navigation};
+    const dependencies = {ko, $, PubSub, CCConstants, navigation};
 
     return ({
       onLoad: (widget) => {
-        console.log(widget, pubsub, ccConstants, navigation);
+        console.log(widget, PubSub, CCConstants, navigation);
         console.log(ko.toJS(widget));
 
-        $.Topic(pubsub.topicNames.PAGE_VIEW_CHANGED).subscribe( pageContext => {
+        $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).subscribe( pageContext => {
           console.log(widget,pageContext)
         });
 
