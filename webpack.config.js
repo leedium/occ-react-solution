@@ -10,8 +10,8 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
-    chunkFilename: '[name].bundle.js',
-    publicPath: '/public/',
+    chunkFilename: '[name].js',
+    publicPath: '/file/widget/anotherWidget/js/',
     libraryTarget: 'amd'
   },
   externals: {

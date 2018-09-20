@@ -25,6 +25,9 @@ function OCCLink(link, label) {
     }
 
     render () {
+
+      console.log(this)
+
       const element = link.indexOf('://') >0  ? (
         <a target="_blank" rel="noopener noreferrer" href={link}>BBE{label}</a>
       ) : (

@@ -22,7 +22,7 @@ const Index = () => (
           <Route exact path="/" component={Home}/>
           <Route exact path="/home" component={Home}/>
           <Route exact path="/dltest" component={props =>
-            <AsyncRoute props={props} importPromise={import(/* webpackChunkName: "DLTest" */ './pages/DLTest')}/>
+            <AsyncRoute props={props} loadingImport={import(/* webpackChunkName: "main0" */ './pages/DLTest')}/>
           }/>
         </div>
       </RouterListener>)}

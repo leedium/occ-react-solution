@@ -8,34 +8,31 @@
 import React, {Component} from 'react';
 import Loadable from 'react-loadable';
 
+const Loader = () => (
+  <div>loading</div>
+);
+
+
 class AsyncRoute extends Component {
-  // state = {
-  //   loaded: false
-  // };
+
+  state = {
+    loaded: false
+  };
 
   component = null;
 
-  componentDidMount(){
-    // console.log(this.props.importPromise)
-    // this.props.importPromise.then(module => {
-    //   console.log('module',module);
-    //   this.setState({
-    //     loaded: true
-    //   })
-    // })
-    this.component = Loadable({
-      loader: () => this.props.importPromise,
-      loading() { return <div>Loading...</div> }
-    })
+  componentDidMount () {
+    this.props.loadingImport.then(module => {
+      this.component = module.default;
+      this.setState({ loaded: true });
+    });
   }
 
-  render() {
-    // if(this.state.loaded) {
-    //   return <this.component {...this.props.props} />
-    // }
-    return (
-      <this.component {...this.props.props} />
-    );
+  render () {
+    if (this.state.loaded) {
+      return <this.component {...this.props.props} />
+    }
+    return <Loader />;
   }
 }
 
