@@ -8,7 +8,6 @@
 import {Component} from 'react';
 import PropTypes from 'prop-types';
 
-
 class OCCComponent extends Component {
   static defaultProps = {
     occProps: null
@@ -19,7 +18,6 @@ class OCCComponent extends Component {
 
   constructor (props, context) {
     super(props, context);
-    console.log(context)
   }
 }
 

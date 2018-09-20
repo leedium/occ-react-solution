@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
+// import { createContext } from "preact-context";
 
-
-const Context = React.createContext();
+const Context = React.createContext('occProps');
 export default Context;

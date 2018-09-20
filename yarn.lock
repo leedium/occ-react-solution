@@ -4880,6 +4880,10 @@ preact-compat@^3.18.4:
     prop-types "^15.6.2"
     standalone-react-addons-pure-render-mixin "^0.1.1"
 
+preact-context@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/preact-context/-/preact-context-1.1.1.tgz#c0cbfcc3346cbf975d40e89e74099a8c148633f7"
+
 preact-render-to-string@^3.8.2:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.8.2.tgz#bd72964d705a57da3a9e72098acaa073dd3ceff9"

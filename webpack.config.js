@@ -18,6 +18,7 @@ const config = {
     'ccConstants': 'ccConstants',
     'ccRestClient': 'ccRestClient',
     'navigation': 'navigation',
+    'ccLogger': 'ccLogger'
   },
   devServer: {
     hot: true,
@@ -25,11 +26,11 @@ const config = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-    alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
+    extensions: ['.js', '.jsx', '.json']
+    // alias: {
+    //   react: 'preact-compat',
+    //   'react-dom': 'preact-compat'
+    // }
   },
   stats: {
     colors: true,

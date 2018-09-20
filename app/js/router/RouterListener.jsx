@@ -7,8 +7,8 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import OCCComponent from '../components/OCCComponent';
-import Context from '../context'
+import OCCComponent from "../components/OCCComponent";
+
 
 class RouterListener extends OCCComponent {
   static contextTypes = {
