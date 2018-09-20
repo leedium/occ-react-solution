@@ -5,11 +5,4 @@
  * source code package.
  */
 
-import OCCLink from './OCCLink/OCCLink';
-
-const Components = {
-  'OCCLink': OCCLink
-};
-
-export default Components;
-
+export const ENDPOINT_PAGE_LAYOUT = '/ccstoreui/v1/pages/layout';

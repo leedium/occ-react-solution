@@ -7,7 +7,8 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import OCCComponent from "../components/OCCComponent";
+import OCCComponent from '../components/OCCComponent';
+import Context from '../context'
 
 class RouterListener extends OCCComponent {
   static contextTypes = {
@@ -35,7 +36,6 @@ class RouterListener extends OCCComponent {
   };
 
   render () {
-    console.log(this.props.children);
     return this.props.children;
   };
 }

@@ -16,7 +16,7 @@ const config = {
     'jquery': 'jquery',
     'pubsub': 'pubsub',
     'ccConstants': 'ccConstants',
-    'ccConstants': 'ccConstants',
+    'ccRestClient': 'ccRestClient',
     'navigation': 'navigation',
   },
   devServer: {

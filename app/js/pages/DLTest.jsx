@@ -12,7 +12,7 @@ import OCCComponent from "../components/OCCComponent";
 class DLTest extends OCCComponent {
   constructor (props, context) {
     super(props, context);
-    console.log(props)
+    console.log(props);
   }
   render() {
     const OCCLink = Components.OCCLink('/','/');
