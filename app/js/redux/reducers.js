@@ -15,13 +15,6 @@ const page = (state = {}, action) => {
   return state;
 };
 
-const occProps = (state = {}, action) => {
-  if (action.type === PAGE_CHANGED) {
-    return Object.assign({}, state, action.payload);
-  }
-  return state;
-};
-
 const rootReducer = combineReducers({ page });
 
 export default rootReducer;

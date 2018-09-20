@@ -12,16 +12,18 @@ import OCCProps from './context'
 
 import RouterListener from './router/RouterListener';
 import Home from './pages/Home'
-import DLTest from "./pages/DLTest";
+import AsyncRoute from "./router/AsyncRoute";
 
-const Index = props => (
+const Index = () => (
   <Router>
     <OCCProps.Consumer>{ occProps =>
       (<RouterListener {...occProps}>
         <div>
           <Route exact path="/" component={Home}/>
           <Route exact path="/home" component={Home}/>
-          <Route exact path="/dltest" component={DLTest}/>
+          <Route exact path="/dltest" component={props =>
+            <AsyncRoute props={props} importPromise={import(/* webpackChunkName: "DLTest" */ './pages/DLTest')}/>
+          }/>
         </div>
       </RouterListener>)}
     </OCCProps.Consumer>

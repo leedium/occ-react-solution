@@ -5,17 +5,16 @@
  * source code package.
  */
 
-import React from 'react';
-import Components from '../components/Components';
-import OCCComponent from "../components/OCCComponent";
+import React, {Component} from 'react';
+import ComponentsMap from '../components/ComponentsMap';
 
-class DLTest extends OCCComponent {
+class DLTest extends Component {
   constructor (props, context) {
     super(props, context);
-    console.log(props);
   }
+
   render() {
-    const OCCLink = Components.OCCLink('/','/');
+    const OCCLink = ComponentsMap.OCCLink('/','/');
     return (
       <div>
         <div>DLTest</div>

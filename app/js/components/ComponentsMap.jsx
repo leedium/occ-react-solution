@@ -7,9 +7,9 @@
 
 import OCCLink from './OCCLink/OCCLink';
 
-const Components = {
+const ComponentsMap = {
   'OCCLink': OCCLink
 };
 
-export default Components;
+export default ComponentsMap;
 

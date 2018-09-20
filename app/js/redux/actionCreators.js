@@ -5,7 +5,7 @@
  * source code package.
  */
 
-// import axios from 'axios';
+import axios from 'axios';
 import {ENDPOINT_PAGE_LAYOUT} from '../constants';
 import {PAGE_CHANGED, PAGE_LAYOUT_LOAD_COMPLETE} from './actions';
 

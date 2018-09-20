@@ -2,12 +2,15 @@ const path = require('path');
 const webpack = require('webpack');
 
 const config = {
-  context: __dirname,
-  entry: ['./app/js/App.jsx'],
+  // mode: 'development',
+  entry: {
+    index:'./app/js/App.jsx'
+  },
   devtool: process.env.NODE_ENV === 'development' ? 'cheap-eval-source-map' : false,
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
+    chunkFilename: '[name].bundle.js',
     publicPath: '/public/',
     libraryTarget: 'amd'
   },
@@ -26,11 +29,11 @@ const config = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
-    // alias: {
-    //   react: 'preact-compat',
-    //   'react-dom': 'preact-compat'
-    // }
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      // react: 'preact-compat',
+      // 'react-dom': 'preact-compat'
+    }
   },
   stats: {
     colors: true,
@@ -51,19 +54,7 @@ const config = {
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
-        query: {
-          presets: [
-            'es2015',
-            'react'
-          ],
-          plugins: [
-            'add-module-exports',
-            'transform-es2015-modules-commonjs',
-            'transform-class-properties'
-          ]
-        },
-        include: [path.resolve('app/js'), path.resolve('node_modules/preact-compat/src')]
+        loader: 'babel-loader'
       }
     ]
   }

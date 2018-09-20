@@ -7,6 +7,7 @@
 
 /* eslint-disable class-methods-use-this, import/no-unresolved, no-undef, import/no-amd, no-unused-vars */
 
+
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -36,14 +37,14 @@ define([
   (ko, $, PubSub, CCConstants, navigation, ccRestClient, logger) => ({
     onLoad: widget => {
       const occProps = {ko, $, PubSub, CCConstants, navigation, ccRestClient, logger};
-      console.log(ko.toJS(widget));
+      // console.log(ko.toJS(widget));
       $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).subscribe((pC) =>{
-        console.log(widget, pC);
+        // console.log(widget, pC);
       });
       ReactDOM.render(
           <Provider store={store}>
             <OCCProps.Provider value={{occProps}}>
-            <Index pageName={'TEST'}/>
+            <Index pageName="TEST"/>
             </OCCProps.Provider>
           </Provider>,
         document.getElementById('root')

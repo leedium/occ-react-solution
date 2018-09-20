@@ -9,13 +9,6 @@ import {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class OCCComponent extends Component {
-  static defaultProps = {
-    occProps: null
-  };
-  static propTypes = {
-    occProps: PropTypes.any
-  };
-
   constructor (props, context) {
     super(props, context);
   }
