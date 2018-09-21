@@ -1,20 +1,24 @@
 {
   "presets": [
-    "es2015",
-    "flow",
-    ["env", {
-      "targets": {
-        "browsers": "last 2 versions"
-      },
-      "loose": true,
-      "modules" : "amd"
-    }]
+    [
+      "@babel/preset-env",
+      {
+        "loose": true,
+        "modules": "amd",
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ]
+        }
+      }
+    ],
+    "@babel/preset-react"
   ],
   "plugins": [
     "add-module-exports",
-    "transform-es2015-modules-commonjs",
-    "transform-class-properties"
+    "transform-class-properties",
+    "syntax-dynamic-import",
+    "transform-es2015-modules-commonjs"
   ]
 }
-
-

@@ -5,7 +5,7 @@
  * source code package.
  */
 
-// import axios from 'axios';
+import axios from 'axios';
 import {ENDPOINT_PAGE_LAYOUT} from '../constants';
 import {PAGE_CHANGED, PAGE_LAYOUT_LOAD_COMPLETE} from './actions';
 
@@ -13,8 +13,8 @@ export function pageChanged (pageContext) {
   return {type: PAGE_CHANGED, payload: pageContext};
 }
 
-export function pageLayoutLoadComplete (pageLayoutData) {
-  return {type: PAGE_LAYOUT_LOAD_COMPLETE, payload: pageLayoutData}
+export function pageLayoutLoadComplete (pageLayout) {
+  return {type: PAGE_LAYOUT_LOAD_COMPLETE, payload: {pageLayout}}
 }
 
 export function pageLayoutLoadStart (path, headers) {
@@ -28,6 +28,9 @@ export function pageLayoutLoadStart (path, headers) {
       responseType: 'json'
     })
       .then(res => {
+
+        console.log('res', res)
+
         dispatch(pageLayoutLoadComplete(res))
       })
       .catch(err => {

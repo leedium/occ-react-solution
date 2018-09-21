@@ -7,13 +7,13 @@
 
 /* eslint-disable class-methods-use-this, import/no-unresolved, no-undef, import/no-amd, no-unused-vars */
 
+
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
 
 import Index from './index';
-import OCCProps from './context';
+import Context from './context';
 import store from './redux/store';
 
 //  artificially create container
@@ -36,15 +36,15 @@ define([
   (ko, $, PubSub, CCConstants, navigation, ccRestClient, logger) => ({
     onLoad: widget => {
       const occProps = {ko, $, PubSub, CCConstants, navigation, ccRestClient, logger};
-      console.log(ko.toJS(widget));
+      // console.log(ko.toJS(widget));
       $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).subscribe((pC) =>{
-        console.log(widget, pC);
+        // console.log(widget, pC);
       });
       ReactDOM.render(
           <Provider store={store}>
-            <OCCProps.Provider value={{occProps}}>
-            <Index pageName={'TEST'}/>
-            </OCCProps.Provider>
+            <Context.Provider value={{occProps}}>
+            <Index pageName="TEST"/>
+            </Context.Provider>
           </Provider>,
         document.getElementById('root')
       );

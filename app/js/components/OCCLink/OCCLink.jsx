@@ -15,13 +15,19 @@ function OCCLink(link, label) {
     componentWillMount(){
       // console.log('componentWillMount')
     }
+
     componentDidMount(){
       // console.log('componentDidMount')
     }
+
     componentWillUnmount(){
       // console.log('componentWillUnmount')
     }
+
     render () {
+
+      console.log(this)
+
       const element = link.indexOf('://') >0  ? (
         <a target="_blank" rel="noopener noreferrer" href={link}>BBE{label}</a>
       ) : (
