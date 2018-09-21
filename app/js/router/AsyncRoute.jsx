@@ -32,7 +32,7 @@ class AsyncRoute extends Component {
     if (this.state.loaded) {
       return <this.component {...this.props.props} />
     }
-    return <Loader />;
+    return null;
   }
 }
 

@@ -10,11 +10,10 @@
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
 
 import Index from './index';
-import OCCProps from './context';
+import Context from './context';
 import store from './redux/store';
 
 //  artificially create container
@@ -43,9 +42,9 @@ define([
       });
       ReactDOM.render(
           <Provider store={store}>
-            <OCCProps.Provider value={{occProps}}>
+            <Context.Provider value={{occProps}}>
             <Index pageName="TEST"/>
-            </OCCProps.Provider>
+            </Context.Provider>
           </Provider>,
         document.getElementById('root')
       );
