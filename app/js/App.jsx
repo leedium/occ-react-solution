@@ -34,8 +34,20 @@ define([
     'ccLogger'
   ],
   (ko, $, PubSub, CCConstants, navigation, ccRestClient, logger) => ({
+
     onLoad: widget => {
-      const occProps = {ko, $, PubSub, CCConstants, navigation, ccRestClient, logger};
+
+      console.log('BODY:', ko.dataFor(document.body));
+
+      const occProps = {
+        depdenencies:{
+          ko, $, PubSub, CCConstants, navigation, ccRestClient, logger
+        },
+        model: {
+          body: ko.dataFor(document.body),
+          widget
+        }
+      };
       // console.log(ko.toJS(widget));
       $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).subscribe((pC) =>{
         // console.log(widget, pC);

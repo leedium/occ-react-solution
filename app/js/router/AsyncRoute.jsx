@@ -6,7 +6,6 @@
  */
 
 import React, {Component} from 'react';
-import Loadable from 'react-loadable';
 
 const Loader = () => (
   <div>loading</div>
@@ -30,7 +29,7 @@ class AsyncRoute extends Component {
 
   render () {
     if (this.state.loaded) {
-      return <this.component {...this.props.props} />
+      return <this.component {...this.props} />
     }
     return null;
   }

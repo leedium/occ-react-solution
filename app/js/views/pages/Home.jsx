@@ -5,23 +5,10 @@
  * source code package.
  */
 
-import React, {Component} from 'react';
-import ComponentsMap from "../components/ComponentsMap";
+import React from 'react';
+import APage from "./APage";
 
-class Home extends Component {
-  constructor (props) {
-    super(props);
-  }
-
-  render() {
-    const OCCLink = ComponentsMap.OCCLink('dltest','DLTest');
-    return (
-      <div>
-        <div>Home</div>
-        <OCCLink />
-      </div>
-    )
-  }
+class Home extends APage {
 }
 
 export default Home;

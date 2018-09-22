@@ -7,7 +7,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import OCCComponent from "../components/OCCComponent";
+import OCCComponent from "../views/components/OCCComponent";
 
 
 class RouterListener extends OCCComponent {
@@ -29,7 +29,7 @@ class RouterListener extends OCCComponent {
   };
 
   handleLocationChange(location) {
-    const {$, PubSub} = this.props.occProps;
+    const {$, PubSub} = this.props.occProps.depdenencies;
     $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).publish({
       path : location.pathname,
     });
