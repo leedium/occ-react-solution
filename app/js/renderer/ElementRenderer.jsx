@@ -13,11 +13,20 @@ class ElementRenderer extends Component {
     let OCCComponent;
     const {widget} = this.props;
 
-    return this.props.elements.map(el => {
-        const Element = ElementsMap[el.type];
-        return <Element key={`occ-react-id-${el.id}`} {...el}/>
-      }
-    )
+    return this.props.elements.map(row => (
+      <div key={`occ-react-row-id-${widget}-${row.id}`} className="row">
+        {
+          row.elements.map(el => {
+            const Element = ElementsMap[el.type];
+            return (
+              <div key={`occ-react-id-${el.id}`} className={el.colClass}>
+                <Element {...el}/>
+              </div>
+            )
+          })
+        }
+      </div>
+    ))
   }
 }
 

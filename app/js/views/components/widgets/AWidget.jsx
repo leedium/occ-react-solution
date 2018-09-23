@@ -6,6 +6,7 @@
  */
 
 import React, {Component} from 'react';
+
 import ElementRenderer from "../../../renderer/ElementRenderer";
 
 class AWidget extends Component {
@@ -22,30 +23,48 @@ class AWidget extends Component {
   componentDidMount () {
     const {ko} = this.props.occProps.depdenencies;
     const elementLength = Object.keys(this.props.context.$elementConfig).length;
+    let rowIndex = 0;
+    let elementCount = 0;
+
     if (elementLength) {
       const widgetMarkup = new DOMParser().parseFromString(this.props.widget.templateSrc, 'text/html');
+      const rows = Array.from(widgetMarkup.querySelectorAll('.row'));
+
+      console.log(rows);
+
       const elementArray = [];
       // console.log('qs:', widgetMarkup.querySelectorAll('span[data-bind^="element: "]'));
       // console.log('WidgetMarkup:', widgetMarkup);
       const original = ko.bindingHandlers.element;
-      ko.bindingHandlers.element = {
-        init: (element, valueAccessor, allBindings, viewModel, bindingContext) => {
-          // console.log('init', element, valueAccessor(), viewModel, bindingContext)
-          const bindingData = allBindings();
-          elementArray.push({
-            id: bindingData.id,
-            type: bindingData.element,
-            element: this.props.context.$elementConfig[bindingData.id]
-          });
-          if (elementArray.length === elementLength) {
-            this.setState({
-              elementArray
-            })
-          }
 
-        }
-      };
-      ko.applyBindings({element: '', id: ''}, widgetMarkup.body);
+      rows.map( (row, i) => {
+          rowIndex = i;
+          elementArray[rowIndex] = {
+            id:i,
+            elements:[]
+          };
+          ko.bindingHandlers.element = {
+            init: (element, valueAccessor, allBindings, viewModel, bindingContext) => {
+              // console.log('init', element.parentNode.className, valueAccessor(), viewModel, bindingContext)
+              const bindingData = allBindings();
+              elementArray[rowIndex].elements.push({
+                id: bindingData.id,
+                type: bindingData.element,
+                colClass: element.parentNode.className,
+                element: this.props.context.$elementConfig[bindingData.id]
+              });
+              elementCount+=1;
+              if (elementCount === elementLength) {
+                this.setState({
+                  elementArray
+                })
+              }
+
+            }
+          };
+          ko.applyBindings({element: '', id: ''}, row);
+          return null;
+      });
       ko.bindingHandlers.element = original;
     }
   }
@@ -55,7 +74,7 @@ class AWidget extends Component {
       console.log('reveal', this.state.elementArray)
       return (
         <div id={`occ-react-id-${this.props.widget.id}`}>
-          <ElementRenderer elements={this.state.elementArray} {...this.props}/>
+          <ElementRenderer elements={this.state.elementArray} />
         </div>)
     }
 

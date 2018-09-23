@@ -9,17 +9,12 @@ import React, {Component} from 'react';
 import WidgetsMap from "../views/components/widgets/WidgetsMap";
 
 class WidgetRenderer extends Component {
-  componentDidMount() {
-
-  }
 
   render () {
     let OCCComponent;
     const {ko} = this.props.occProps.depdenencies;
     const {widget} = this.props;
     const context = ko.contextFor(document.getElementById(`${widget.typeId}-${widget.id}`));
-
-    console.log(widget, context);
 
     try {
       OCCComponent = WidgetsMap[widget.typeId.split('_')[0]];
