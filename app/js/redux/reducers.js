@@ -5,17 +5,24 @@
  * source code package.
  */
 
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 import {PAGE_CHANGED, PAGE_LAYOUT_LOAD_COMPLETE} from './actions';
 
-const page = (state = {}, action) => {
+let initialState = {};
+
+export const getInitialState = () => initialState;
+export const setInitialState = val => {
+  initialState = val;
+  return initialState;
+};
+
+const page = (state = initialState, action) => {
   if (action.type === PAGE_LAYOUT_LOAD_COMPLETE) {
-    console.log('PAGE_LAYOUT_LOAD_COMPLETE', state, action)
     return Object.assign({}, state, action.payload);
   }
   return state;
 };
 
-const rootReducer = combineReducers({ page });
+const rootReducer = combineReducers({page});
 
 export default rootReducer;

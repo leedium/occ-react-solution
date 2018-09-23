@@ -27,13 +27,13 @@ class APage extends Component {
 
 
   componentDidMount () {
-    console.log('6. component did mount', this.props, this.context);
+    // console.log('6. component did mount', this.props, this.context);
     const route = this.props.match.url;
     this.props.pageLayoutLoad(route);
   }
 
   static getDerivedStateFromProps (nextProps, prevState) {
-    console.log('3. getDerivedStateFromProps', nextProps, prevState);
+    // console.log('3. getDerivedStateFromProps', nextProps, prevState);
     return nextProps
   }
 
@@ -53,8 +53,6 @@ class APage extends Component {
             }, [])
           }))
     }
-
-    console.log('bb', pageBody);
 
     return (<div className="container">
       <PageLayoutRenderer pageBody={pageBody} {...this.props}/>

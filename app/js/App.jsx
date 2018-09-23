@@ -15,6 +15,7 @@ import {Provider} from 'react-redux';
 import Index from './index';
 import Context from './context';
 import store from './redux/store';
+import {setInitialState} from './redux/reducers';
 
 //  artificially create container
 const root = document.createElement('div');
@@ -48,6 +49,9 @@ define([
           widget
         }
       };
+
+      // setInitialState({occProps});
+
       // console.log(ko.toJS(widget));
       $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).subscribe((pC) =>{
         // console.log(widget, pC);

@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+var JavaScriptObfuscator = require('webpack-obfuscator');
 
 const config = {
   // mode: 'development',
@@ -43,6 +44,9 @@ const config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin()
+    // new JavaScriptObfuscator ({
+    //   rotateUnicodeArray: true
+    // }, [])
   ],
   module: {
     rules: [

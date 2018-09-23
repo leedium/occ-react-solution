@@ -6,22 +6,27 @@
  */
 
 import React, {Component} from 'react';
-import ComponentsMap from "../views/components/ComponentsMap";
+import WidgetsMap from "../views/components/widgets/WidgetsMap";
 
 class WidgetRenderer extends Component {
+  componentDidMount() {
+
+  }
+
   render () {
     let OCCComponent;
     const {ko} = this.props.occProps.depdenencies;
     const {widget} = this.props;
-    console.log('ko:widget', widget, this.props.occProps.model.widget);
-    // console.log(ko.contextFor(document.getElementById(`${widget.typeId}-${widget.id}`)));
     const context = ko.contextFor(document.getElementById(`${widget.typeId}-${widget.id}`));
+
+    console.log(widget, context);
+
     try {
-      OCCComponent = ComponentsMap[widget.typeId.split('_'[0])](widget, context);
+      OCCComponent = WidgetsMap[widget.typeId.split('_')[0]];
     }catch(err){
       OCCComponent = null
     }
-    return OCCComponent ? <OCCComponent/> : null;
+      return OCCComponent ? <OCCComponent context={context} {...this.props}/> : null;
   }
 }
 

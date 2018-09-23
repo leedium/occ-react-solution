@@ -7,12 +7,16 @@
 
 import axios from 'axios';
 import {ENDPOINT_PAGE_LAYOUT} from '../constants';
-import {PAGE_CHANGED, PAGE_LAYOUT_LOAD_COMPLETE} from './actions';
+import {PAGE_CHANGED, PAGE_LAYOUT_LOAD_COMPLETE, APP_INIT_OCC_PROPS} from './actions';
 
 const pageMap = new Map();
 
-export function pageChanged (pageContext) {
-  return {type: PAGE_CHANGED, payload: pageContext};
+export function siteInitStore(occProps) {
+  return {type: APP_INIT_OCC_PROPS, payload: occProps }
+}
+
+export function pageChanged (payload) {
+  return {type: PAGE_CHANGED, payload};
 }
 
 export function pageLayoutLoadComplete (pageLayout) {
