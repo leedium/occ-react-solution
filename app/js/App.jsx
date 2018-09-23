@@ -37,7 +37,7 @@ define([
 
     onLoad: widget => {
 
-      console.log('BODY:', ko.dataFor(document.body));
+      // console.log('BODY:', ko.dataFor(document));
 
       const occProps = {
         depdenencies:{

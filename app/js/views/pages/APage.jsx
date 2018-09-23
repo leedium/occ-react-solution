@@ -56,8 +56,8 @@ class APage extends Component {
 
     console.log('bb', pageBody);
 
-    return (<div>
-      <PageLayoutRenderer pageBody={pageBody}/>
+    return (<div className="container">
+      <PageLayoutRenderer pageBody={pageBody} {...this.props}/>
     </div>);
   }
 }

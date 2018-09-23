@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import OCCComponent from "../views/components/OCCComponent";
 
 
-class RouterListener extends OCCComponent {
+class RouterListener extends Component {
   static contextTypes = {
     router: PropTypes.object
   };

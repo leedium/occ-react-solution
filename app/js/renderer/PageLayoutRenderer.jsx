@@ -7,6 +7,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import RegionRenderer from "./RegionRenderer";
 
 class PageLayoutRenderer extends Component {
   static defaultProps = {
@@ -18,8 +19,11 @@ class PageLayoutRenderer extends Component {
   };
 
   render () {
-    const body = this.props.pageBody.length ? this.props.pageBody.map( rows  => (
-      <div className="" key={`row${rows.key}`}>region</div>
+    const body = this.props.pageBody.length ? this.props.pageBody.map(rows => (
+      <div className="row" key={`row${rows.key}`}>
+        {rows.regions.map(region =>
+          <RegionRenderer key={region.id} widgets={region.widgets} width={region.width} {...this.props}/>)}
+      </div>
     )) : null;
 
     return body;

@@ -6,9 +6,11 @@
  */
 
 import OCCLink from './OCCLink/OCCLink';
+import AWiget from "./AWidget/AWiget";
 
 const ComponentsMap = {
-  'OCCLink': OCCLink
+  'OCCLink': OCCLink,
+  'aWidget': AWiget
 };
 
 export default ComponentsMap;

@@ -1,0 +1,15 @@
+{
+  "configOptions":["richText"],
+  "availableToAllWidgets": true,
+  "tag":"aRichText",
+  "inline": false,
+  "translations": [
+    {
+      "description": "test",
+      "language": "en",
+      "title": "aRT"
+    }
+  ],
+  "type": "fragment",
+  "version": 1
+}
