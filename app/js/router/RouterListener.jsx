@@ -27,8 +27,8 @@ class RouterListener extends Component {
     const { context } = this;
     const { occProps } = this.props;
 
-    console.log(occProps);
-    console.log(context);
+    // console.log(occProps);
+    // console.log(context);
 
     this.handleLocationChange(context.router.history.location);
     this.unListen = context.router.history.listen(

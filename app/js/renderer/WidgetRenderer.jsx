@@ -16,7 +16,7 @@ const WidgetRenderer = props => {
   const widgetContext = ko.contextFor(
     document.getElementById(`${widget.typeId}-${widget.id}`)
   );
-  console.log(widgetContext, props);
+  // console.log(widgetContext, props)
   try {
     OCCComponent = WidgetsMap[widget.typeId.split("_")[0]];
   } catch (err) {
