@@ -5,13 +5,11 @@
  * source code package.
  */
 
-import OccLink from '../elements/occLink/OccLink';
 import WebContent from "./webContent/WebContent";
 
 const WidgetsMap = {
-  'aWidget': WebContent,
-  'webContent': WebContent
+  aWidget: WebContent,
+  webContent: WebContent
 };
 
 export default WidgetsMap;
-

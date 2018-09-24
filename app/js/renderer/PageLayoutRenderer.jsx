@@ -5,8 +5,8 @@
  * source code package.
  */
 
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import RegionRenderer from "./RegionRenderer";
 
 class PageLayoutRenderer extends Component {
@@ -15,16 +15,29 @@ class PageLayoutRenderer extends Component {
   };
 
   static propTypes = {
-    pageBody: PropTypes.array
+    pageBody: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.number
+      })
+    )
   };
 
-  render () {
-    const body = this.props.pageBody.length ? this.props.pageBody.map(rows => (
-      <div className="row" key={`row${rows.key}`}>
-        {rows.regions.map(region =>
-          <RegionRenderer key={region.id} widgets={region.widgets} width={region.width} {...this.props}/>)}
-      </div>
-    )) : null;
+  render() {
+    const { pageBody } = this.props;
+    const body = pageBody.length
+      ? pageBody.map(rows => (
+          <div className="row" key={`row${rows.key}`}>
+            {rows.regions.map(region => (
+              <RegionRenderer
+                key={region.id}
+                widgets={region.widgets}
+                width={region.width}
+                {...this.props}
+              />
+            ))}
+          </div>
+        ))
+      : null;
 
     return body;
   }

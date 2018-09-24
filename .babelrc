@@ -1,15 +1,13 @@
 {
   "presets": [
+    "@babel/preset-flow",
     [
       "@babel/preset-env",
       {
         "loose": true,
         "modules": "amd",
         "targets": {
-          "browsers": [
-            "last 2 versions",
-            "safari >= 7"
-          ]
+          "browsers": ["last 2 versions", "safari >= 7"]
         }
       }
     ],

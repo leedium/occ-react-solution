@@ -1,36 +1,37 @@
-const path = require('path');
-const webpack = require('webpack');
-var JavaScriptObfuscator = require('webpack-obfuscator');
+const path = require("path");
+const webpack = require("webpack");
+// var JavaScriptObfuscator = require('webpack-obfuscator');
 
 const config = {
   // mode: 'development',
   entry: {
-    index:'./app/js/App.jsx'
+    index: "./app/js/App.jsx"
   },
-  devtool: process.env.NODE_ENV === 'development' ? 'cheap-eval-source-map' : false,
+  devtool:
+    process.env.NODE_ENV === "development" ? "cheap-eval-source-map" : false,
   output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js',
-    chunkFilename: '[name].js',
-    publicPath: '/file/widget/anotherWidget/js/',
-    libraryTarget: 'amd'
+    path: path.resolve(__dirname, "public"),
+    filename: "bundle.js",
+    chunkFilename: "[name].js",
+    publicPath: "/file/widget/anotherWidget/js/",
+    libraryTarget: "amd"
   },
   externals: {
-    'knockout': 'knockout',
-    'jquery': 'jquery',
-    'pubsub': 'pubsub',
-    'ccConstants': 'ccConstants',
-    'ccRestClient': 'ccRestClient',
-    'navigation': 'navigation',
-    'ccLogger': 'ccLogger'
+    knockout: "knockout",
+    jquery: "jquery",
+    pubsub: "pubsub",
+    ccConstants: "ccConstants",
+    ccRestClient: "ccRestClient",
+    navigation: "navigation",
+    ccLogger: "ccLogger"
   },
   devServer: {
     hot: true,
-    publicPath: '/public/',
+    publicPath: "/public/",
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: [".js", ".jsx", ".json"],
     alias: {
       // react: 'preact-compat',
       // 'react-dom': 'preact-compat'
@@ -51,21 +52,23 @@ const config = {
   module: {
     rules: [
       {
-        enforce: 'pre',
+        enforce: "pre",
         test: /\.jsx?$/,
-        loader: 'eslint-loader',
+        loader: "eslint-loader",
         exclude: /node_modules/
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader'
+        loader: "babel-loader"
       }
     ]
   }
 };
 
-if (process.env.NODE_ENV === 'development') {
-  config.entry.unshift('webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000');
+if (process.env.NODE_ENV === "development") {
+  config.entry.unshift(
+    "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000"
+  );
 }
 
 module.exports = config;

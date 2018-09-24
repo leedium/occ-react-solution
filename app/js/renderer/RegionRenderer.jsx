@@ -5,19 +5,14 @@
  * source code package.
  */
 
-import React, {Component, PureComponent} from 'react';
+import React from "react";
 import WidgetRenderer from "./WidgetRenderer";
 
-class RegionRenderer extends PureComponent {
-  render () {
-    return (
-      this.props.widgets.map(widget =>
-        <div key={widget.id} className={`col-xs-${this.props.width}`}>
-         <WidgetRenderer widget={widget} {...this.props}/>
-        </div>
-      )
-    );
-  }
-}
+const RegionRenderer = props =>
+  props.widgets.map(widget => (
+    <div key={widget.id} className={`col-xs-${props.width}`}>
+      <WidgetRenderer widget={widget} {...props} />
+    </div>
+  ));
 
 export default RegionRenderer;

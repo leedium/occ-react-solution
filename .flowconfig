@@ -6,4 +6,8 @@
 [libs]
 styled-components
 
+[lints]
+
 [options]
+
+[strict]

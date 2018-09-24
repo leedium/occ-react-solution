@@ -5,8 +5,9 @@
  * source code package.
  */
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
+export const other = null;
 export const PageLayoutType = PropTypes.shape({
   route: PropTypes.string,
   isPreview: PropTypes.bool,
@@ -18,7 +19,7 @@ export const PageLayoutType = PropTypes.shape({
           global: PropTypes.bool,
           isPreview: PropTypes.bool,
           displayName: PropTypes.string,
-          instanceName: PropTypes.string,
+          instanceName: PropTypes.string
         })
       )
     })

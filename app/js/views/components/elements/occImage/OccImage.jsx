@@ -5,10 +5,8 @@
  * source code package.
  */
 
-import React, {Component} from 'react';
+import React from "react";
 
-const OccImage = (link, label) =>
-  <img alt="" src="https://via.placeholder.com/350x150"/>
-
+const OccImage = () => <img alt="" src="https://via.placeholder.com/350x150" />;
 
 export default OccImage;

@@ -5,10 +5,9 @@
  * source code package.
  */
 
-import React from 'react';
+// import React from 'react';
 import APage from "./APage";
 
-class Home extends APage {
-}
+class Home extends APage {}
 
 export default Home;

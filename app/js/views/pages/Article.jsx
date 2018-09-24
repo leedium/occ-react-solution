@@ -5,11 +5,9 @@
  * source code package.
  */
 
-import React from 'react';
+// import React from 'react';
 import APage from "./APage";
 
-class Article extends APage {
-}
-
+class Article extends APage {}
 
 export default Article;

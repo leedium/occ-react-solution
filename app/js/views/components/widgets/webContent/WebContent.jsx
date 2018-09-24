@@ -1,3 +1,4 @@
+// @flow
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
@@ -5,23 +6,17 @@
  * source code package.
  */
 
-import React from 'react';
-import AWidget from "../AWidget";
+import React from "react";
 
-class WebContent extends AWidget {
-  constructor (props, context){
-    super(props, context);
-  }
+import ElementRenderer from "../../../../renderer/ElementRenderer";
 
-  // render () {
-  //   console.log('WebContent',this.state.elementArray.length, this.componentReady, this.props.widget, this.props.context);
-  //
-  //   if (this.state.elementArray.length) {
-  //     super.render();
-  //   }
-  //   return <div className="a-widget"/>
-  // }
-}
+type Props = {
+  widgetContext: any,
+  widget: any
+};
 
+const WebContent = ({ widgetContext, widget }: Props) => (
+  <ElementRenderer widgetContext={widgetContext} widget={widget} />
+);
 
 export default WebContent;

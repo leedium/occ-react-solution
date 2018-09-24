@@ -5,8 +5,7 @@
  * source code package.
  */
 
-import React from 'react';
-// import { createContext } from "preact-context";
+import React from "react";
 
-const Context = React.createContext('occProps');
+const Context = React.createContext("occProps");
 export default Context;
