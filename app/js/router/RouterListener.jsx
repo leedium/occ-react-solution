@@ -5,39 +5,57 @@
  * source code package.
  */
 
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import OCCComponent from "../components/OCCComponent";
+import { Component } from "react";
+import PropTypes from "prop-types";
 
+// type Props = {
+//   occProps: any,
+//   children: Array<any>
+// };
 
-class RouterListener extends OCCComponent {
+class RouterListener extends Component {
   static contextTypes = {
-    router: PropTypes.object
+    router: PropTypes.shape({})
   };
 
   static propTypes = {
+    occProps: PropTypes.shape({}).isRequired,
     children: PropTypes.element.isRequired
   };
 
-  componentDidMount(){
-    this.handleLocationChange(this.context.router.history.location);
-    this.unListen = this.context.router.history.listen(this.handleLocationChange.bind(this));
-  };
+  componentDidMount() {
+    const { context } = this;
+    const { occProps } = this.props;
 
-  componentWillUnmount(){
+    // console.log(occProps);
+    // console.log(context);
+
+    this.handleLocationChange(context.router.history.location);
+    this.unListen = context.router.history.listen(
+      this.handleLocationChange.bind(this)
+    );
+  }
+
+  componentWillUnmount() {
     this.unListen();
+  }
+
+  unListen = () => {
+    super.unListen();
   };
 
   handleLocationChange(location) {
-    const {$, PubSub} = this.props.occProps;
+    const { occProps } = this.props;
+    const { $, PubSub } = occProps.dependencies;
     $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).publish({
-      path : location.pathname,
+      path: location.pathname
     });
-  };
+  }
 
-  render () {
-    return this.props.children;
-  };
+  render() {
+    const { children } = this.props;
+    return children;
+  }
 }
 
 export default RouterListener;

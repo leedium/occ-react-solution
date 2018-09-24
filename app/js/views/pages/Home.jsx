@@ -5,8 +5,9 @@
  * source code package.
  */
 
-import React from 'react';
-// import { createContext } from "preact-context";
+// import React from 'react';
+import APage from "./APage";
 
-const Context = React.createContext('occProps');
-export default Context;
+class Home extends APage {}
+
+export default Home;

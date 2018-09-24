@@ -5,11 +5,19 @@
  * source code package.
  */
 
-import { combineReducers } from 'redux';
-import { PAGE_CHANGED } from './actions';
+import { combineReducers } from "redux";
+import { PAGE_LAYOUT_LOAD_COMPLETE } from "./actions";
 
-const page = (state = {}, action) => {
-  if (action.type === PAGE_CHANGED) {
+let initialState = {};
+
+export const getInitialState = () => initialState;
+export const setInitialState = val => {
+  initialState = val;
+  return initialState;
+};
+
+const page = (state = initialState, action) => {
+  if (action.type === PAGE_LAYOUT_LOAD_COMPLETE) {
     return Object.assign({}, state, action.payload);
   }
   return state;

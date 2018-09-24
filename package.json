@@ -9,7 +9,8 @@
     "dev": "webpack-dev-server",
     "test": "jest",
     "test:update": "jest -u",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "flow": "flow"
   },
   "jest": {
     "snapshotSerializers": [
@@ -32,6 +33,7 @@
     "react": "^16.5.2",
     "react-addons-perf": "^15.4.2",
     "react-dom": "^16.5.2",
+    "react-html-parser": "^2.0.2",
     "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
@@ -45,6 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
@@ -59,10 +62,12 @@
     "eslint-config-prettier": "^3.0.1",
     "eslint-config-react": "^1.1.7",
     "eslint-loader": "^2.1.1",
+    "eslint-plugin-flowtype": "^2.50.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
+    "flow-bin": "^0.81.0",
     "jest": "^23.6.0",
     "jest-serializer-enzyme": "^1.0.0",
     "moxios": "^0.4.0",
@@ -70,7 +75,8 @@
     "react-hot-loader": "^4.3.10",
     "react-test-renderer": "^16.5.2",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.8"
+    "webpack-dev-server": "^3.1.8",
+    "webpack-obfuscator": "^0.18.0"
   },
   "name": "complete-intro-to-react",
   "version": "3.0.0",

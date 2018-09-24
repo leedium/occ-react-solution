@@ -5,11 +5,7 @@
  * source code package.
  */
 
-import OCCLink from './OCCLink/OCCLink';
+import React from "react";
 
-const ComponentsMap = {
-  'OCCLink': OCCLink
-};
-
-export default ComponentsMap;
-
+const Context = React.createContext("occProps");
+export default Context;

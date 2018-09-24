@@ -5,4 +5,5 @@
  * source code package.
  */
 
-export const ENDPOINT_PAGE_LAYOUT = '/ccstoreui/v1/pages/layout';
+export const ENDPOINT_PAGE_LAYOUT = "/ccstoreui/v1/pages/layout";
+export const OTHER = "/ccstoreui/v1/pages/layout";
