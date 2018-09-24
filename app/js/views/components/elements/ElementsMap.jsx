@@ -5,14 +5,15 @@
  * source code package.
  */
 
-import OccRichText from './occRichText/OccRichText';
-import OccImage from './occImage/OccImage';
+import OccRichText from "./occRichText/OccRichText";
+import OccGenericText from "./occGenericText/OccGenericText";
+import OccImage from "./occImage/OccImage";
 
 const WidgetsMap = {
-  'image': OccImage,
-  'rich-text': OccRichText,
-  'editorialLink': OccRichText
+  image: OccImage,
+  "rich-text": OccRichText,
+  "generic-text": OccGenericText,
+  editorialLink: OccRichText
 };
 
 export default WidgetsMap;
-
