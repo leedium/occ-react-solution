@@ -31,7 +31,6 @@ class APage extends Component {
   }
 
   static getDerivedStateFromProps(nextProps) {
-    // console.log('3. getDerivedStateFromProps', nextProps, prevState);
     return nextProps;
   }
 

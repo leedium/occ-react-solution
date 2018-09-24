@@ -11,7 +11,13 @@ import React from "react";
 import ReactHtmlParser from "react-html-parser";
 
 type Props = {
-  elementConfig: any
+  elementConfig: {
+    node: {},
+    richText: {
+      id: number,
+      content: string
+    }
+  }
 };
 
 const OccRichText = ({ elementConfig }: Props) => (

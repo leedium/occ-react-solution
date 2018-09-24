@@ -1,0 +1,15 @@
+{
+  "configOptions": ["richText"],
+  "availableToAllWidgets": true,
+  "tag": "occ-react-rich-text",
+  "inline": false,
+  "translations": [
+    {
+      "description": "React implementation of the occ Rich Text Element",
+      "language": "en",
+      "title": "React Rich Text"
+    }
+  ],
+  "type": "fragment",
+  "version": 1
+}
