@@ -6,8 +6,5 @@
  */
 
 define([], function() {
-  return {
-    elementName: "react-image",
-    onLoad: function(widget) {}
-  };
+  return {};
 });

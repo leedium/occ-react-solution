@@ -7,6 +7,14 @@
 
 import React from "react";
 
-const OccImage = () => <img alt="" src="https://via.placeholder.com/350x150" />;
+const OccImage = ({ elementConfig }) => (
+  <div>
+    <img
+      title={elementConfig.title}
+      alt={elementConfig.alt}
+      src={elementConfig.path}
+    />
+  </div>
+);
 
 export default OccImage;

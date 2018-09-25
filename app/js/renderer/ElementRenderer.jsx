@@ -46,8 +46,6 @@ class ElementRenderer extends Component<Props, State> {
         return null;
       }
 
-      // console.log(node);
-
       if (node.attribs["data-bind"]) {
         if (
           node.attribs["data-bind"].indexOf(`element: 'generic-text'`) ||
