@@ -1,3 +1,5 @@
+// @flow
+
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
@@ -6,15 +8,53 @@
  */
 
 import React from "react";
+import { convertDashKeysToCamelCase } from "../../../../utils/utils";
 
-const OccImage = ({ elementConfig }) => (
-  <div>
+type Props = {
+  elementConfig: {
+    border: {},
+    horizontalAlignment: {},
+    id: string,
+    image: {
+      altText: string,
+      link: string,
+      src: string,
+      titleText: string
+    },
+    padding: {}
+  }
+};
+
+const OccImage = ({ elementConfig }: Props) => {
+  const { image } = elementConfig;
+  const img = (
     <img
-      title={elementConfig.title}
-      alt={elementConfig.alt}
-      src={elementConfig.path}
+      style={convertDashKeysToCamelCase(
+        Object.assign(
+          { borderStyle: "solid", width: "100%" },
+          elementConfig.border,
+          elementConfig.horizontalAlignment,
+          {
+            ...Object.keys(elementConfig.padding).reduce((acc, b) => {
+              acc[b] = `${elementConfig.padding[b]}px`;
+              return acc;
+            }, {})
+          }
+        )
+      )}
+      title={image.titleText}
+      alt={image.altText}
+      src={image.src}
     />
-  </div>
-);
+  );
+
+  return image.link ? (
+    <a title={image.titleText} href={image.link}>
+      {img}
+    </a>
+  ) : (
+    img
+  );
+};
 
 export default OccImage;
