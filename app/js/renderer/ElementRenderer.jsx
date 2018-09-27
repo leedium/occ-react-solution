@@ -11,6 +11,7 @@ import React, { Component } from "react";
 import ReactHtmlParser, { convertNodeToElement } from "react-html-parser";
 
 import ElementsMap from "../views/components/elements/ElementsMap";
+import AsyncElement from "../views/components/elements/AsyncElement";
 
 function looseJsonParse(obj) {
   // $FlowFixMe
@@ -35,6 +36,8 @@ class ElementRenderer extends Component<Props, State> {
     elementMarkup: ""
   };
 
+  elementPromiseArray = [];
+
   componentDidMount() {
     this.injectElement();
   }
@@ -55,14 +58,27 @@ class ElementRenderer extends Component<Props, State> {
         ) {
           const data = looseJsonParse(`{${node.attribs["data-bind"]}}`);
           const Element = ElementsMap[data.element];
+          this.elementPromiseArray.push(Element);
+          console.log(this.elementPromiseArray, widgetContext);
+
           return (
-            <Element
+            <AsyncElement
+              elementPromise={Element}
               key={`occ-react-id-${data.id}`}
               elementConfig={widgetContext.$elementConfig[data.id]}
               widget={widget}
               nodeName={node.name}
             />
           );
+
+          // return (
+          //   <Element
+          //     key={`occ-react-id-${data.id}`}
+          //     elementConfig={widgetContext.$elementConfig[data.id]}
+          //     widget={widget}
+          //     nodeName={node.name}
+          //   />
+          // );
         }
       }
       return convertNodeToElement(node, index, transform);
