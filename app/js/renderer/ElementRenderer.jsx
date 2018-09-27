@@ -59,26 +59,17 @@ class ElementRenderer extends Component<Props, State> {
           const data = looseJsonParse(`{${node.attribs["data-bind"]}}`);
           const Element = ElementsMap[data.element];
           this.elementPromiseArray.push(Element);
-          console.log(this.elementPromiseArray, widgetContext);
 
           return (
             <AsyncElement
               elementPromise={Element}
+              id={`occ-react-id-${data.id}`}
               key={`occ-react-id-${data.id}`}
               elementConfig={widgetContext.$elementConfig[data.id]}
               widget={widget}
               nodeName={node.name}
             />
           );
-
-          // return (
-          //   <Element
-          //     key={`occ-react-id-${data.id}`}
-          //     elementConfig={widgetContext.$elementConfig[data.id]}
-          //     widget={widget}
-          //     nodeName={node.name}
-          //   />
-          // );
         }
       }
       return convertNodeToElement(node, index, transform);

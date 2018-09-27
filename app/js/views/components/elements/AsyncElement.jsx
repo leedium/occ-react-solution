@@ -7,18 +7,19 @@
  * source code package.
  */
 
-import React, { Component, ComponentType } from "react";
+import React, { Component } from "react";
+import type { StatelessFunctionalComponent } from "react";
 
 type Props = {
   elementPromise: Promise<*>,
-  key: string,
+  id: string,
   elementConfig: {},
   widget: {},
   nodeName: string
 };
 
 type State = {
-  elementReady: ComponentType<*>
+  elementReady: StatelessFunctionalComponent<*>
 };
 
 class AsyncElement extends Component<Props, State> {
@@ -37,11 +38,11 @@ class AsyncElement extends Component<Props, State> {
 
   render() {
     const { elementReady } = this.state;
+    const { id } = this.props;
 
     if (elementReady) {
-      const Element = elementReady;
-
-      return <Element {...this.props} />;
+      const El = elementReady;
+      return <El key={id} {...this.props} />;
     }
 
     return null;
