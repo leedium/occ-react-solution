@@ -71,6 +71,8 @@ class ElementRenderer extends Component<Props, State> {
             />
           );
         }
+      } else if (node.name === "a") {
+        console.log("a", node);
       }
       return convertNodeToElement(node, index, transform);
     };
