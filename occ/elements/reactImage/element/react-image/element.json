@@ -1,0 +1,15 @@
+{
+  "configOptions": ["image", "richText"],
+  "availableToAllWidgets": true,
+  "tag": "occ-react-image",
+  "inline": false,
+  "translations": [
+    {
+      "description": "React implementation of the occ Image Element",
+      "language": "en",
+      "title": "React Image"
+    }
+  ],
+  "type": "fragment",
+  "version": 1
+}
