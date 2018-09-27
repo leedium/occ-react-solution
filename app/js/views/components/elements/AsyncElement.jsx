@@ -24,7 +24,7 @@ type State = {
 
 class AsyncElement extends Component<Props, State> {
   state = {
-    elementReady: null
+    elementReady: () => null
   };
 
   componentDidMount() {
