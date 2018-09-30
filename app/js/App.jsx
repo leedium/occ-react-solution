@@ -47,6 +47,7 @@ define([
         widget
       }
     };
+
     $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).subscribe(() => {});
     ReactDOM.render(
       <Provider store={store}>
