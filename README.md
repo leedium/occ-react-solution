@@ -1,2 +1,0 @@
-# occ-react
-occ-react
