@@ -14,7 +14,7 @@ import { Provider } from "react-redux";
 import Index from "./Index";
 import Context from "./Context";
 import store from "./redux/store";
-import occEventTransformer from './vendor/occ/eventTransformer';
+import occEventTransformer from "./vendor/occ/eventTransformer";
 
 //  artificially create container
 const root = document.createElement("div");
@@ -30,8 +30,28 @@ define([
   "ccConstants",
   "navigation",
   "ccRestClient",
-  "ccLogger"
-], (ko, $, PubSub, CCConstants, navigation, ccRestClient, logger) => ({
+  "ccLogger",
+  "CCi18n",
+  "ccNumber",
+  "currencyHelper",
+  "numberFormatHelper",
+  "ojs/ojcore",
+  "ojs/ojvalidation"
+], (
+  ko,
+  $,
+  PubSub,
+  CCConstants,
+  navigation,
+  ccRestClient,
+  logger,
+  CCi18n,
+  ccNumber,
+  currencyHelper,
+  numberFormatHelper,
+  ojcore,
+  ojvalidation
+) => ({
   onLoad: widget => {
     const occProps = {
       dependencies: {
@@ -41,13 +61,24 @@ define([
         CCConstants,
         navigation,
         ccRestClient,
-        logger
+        logger,
+        CCi18n,
+        ccNumber,
+        currencyHelper,
+        numberFormatHelper,
+        ojcore,
+        ojvalidation
       },
       model: {
         body: ko.dataFor(document.body),
         widget
       }
     };
+
+    // console.log('CCi18n',CCi18n);
+    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.selectShippingMethodText'));
+    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.welcome'));
+    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.wishlistPageLoadedText'));
 
     occEventTransformer(occProps);
 

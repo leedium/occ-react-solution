@@ -5,43 +5,43 @@
  * source code package.
  */
 
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-import {PageLayoutType} from "../../types";
+import { PageLayoutType } from "../../types";
 import PageLayoutRenderer from "../../vendor/occ/renderer/PageLayoutRenderer";
-import {pageLayoutLoadStart} from "../../redux/actions/pageActions";
+import { pageLayoutLoadStart } from "../../redux/actions/pageActions";
 
 class APage extends Component {
   static propTypes = {
     pageLayout: PageLayoutType,
-    pageLayoutLoad: PropTypes.func.isRequired,
+    pageLayoutLoad: PropTypes.func,
     match: PropTypes.shape({
       url: PropTypes.string
     }).isRequired
-
   };
 
   static defaultProps = {
-    pageLayout: null
+    pageLayout: null,
+    pageLayoutLoad: PropTypes.func
   };
 
   state = {};
 
-  componentDidMount () {
-    const {match, pageLayoutLoad} = this.props;
+  componentDidMount() {
+    const { match, pageLayoutRequest } = this.props;
     const route = match.url;
-    pageLayoutLoad(route);
+    pageLayoutRequest(route);
   }
 
-  static getDerivedStateFromProps (nextProps) {
+  static getDerivedStateFromProps(nextProps) {
     return nextProps;
   }
 
-  render () {
+  render() {
     let pageBody = [];
-    const {pageLayout, occProps} = this.props;
+    const { pageLayout, occProps } = this.props;
     if (pageLayout) {
       const regionsMap = new Map(
         pageLayout.regions.map(region => [region.id, region])
@@ -76,9 +76,8 @@ const mapStateToProps = state => ({
   pageLayout: state.page.pageLayout
 });
 
-
 const mapDispatchToProps = dispatch => ({
-  pageLayoutLoad (payload) {
+  pageLayoutRequest(payload) {
     dispatch(pageLayoutLoadStart(payload));
   }
 });

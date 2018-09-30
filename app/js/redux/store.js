@@ -12,7 +12,7 @@ import page from "./reducers/pageReducer";
 import model from "./reducers/modelReducer";
 
 const store = createStore(
-  combineReducers({page, model}),
+  combineReducers({ page, model }),
   compose(
     applyMiddleware(thunk),
     typeof window === "object" &&

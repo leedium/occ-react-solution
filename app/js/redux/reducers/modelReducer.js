@@ -5,30 +5,29 @@
  * source code package.
  */
 
-
-import {USER_LOGIN_SUCCESSFUL, USER_LOGOUT_SUCCESSFUL} from "../actions/actions";
+import {
+  USER_LOGIN_SUCCESSFUL,
+  USER_LOGOUT_SUCCESSFUL
+} from "../actions/actions";
 
 const initialModel = {
-  user:{},
-  product:{},
-  cart:{},
-  pageContext:{}
+  user: {},
+  product: {},
+  cart: {},
+  pageContext: {}
 };
-
 
 //  model
 const modelReducer = (state = initialModel, action) => {
-  switch(action.type){
+  switch (action.type) {
     case USER_LOGIN_SUCCESSFUL:
     case USER_LOGOUT_SUCCESSFUL:
+      console.log("action", action.payload);
 
-      console.log('action',action.payload);
-
-      return Object.assign({},state, action.payload);
+      return Object.assign({}, state, action.payload);
     default:
-      return state
+      return state;
   }
 };
 
 export default modelReducer;
-
