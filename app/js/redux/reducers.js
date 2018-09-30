@@ -6,22 +6,37 @@
  */
 
 import { combineReducers } from "redux";
-import { PAGE_LAYOUT_LOAD_COMPLETE } from "./actions";
+import { PAGE_LAYOUT_LOAD_COMPLETE, USER_LOGIN_SUCCESSFUL } from "./actions";
 
-let initialState = {};
-
-export const getInitialState = () => initialState;
-export const setInitialState = val => {
-  initialState = val;
-  return initialState;
+let initialPageState = {
+  pageLayout:{},
 };
 
-const page = (state = initialState, action) => {
+
+let initialUserState = {}
+
+export const getInitialPageState = () => initialPageState;
+export const setInitialPageState = val => {
+  initialPageState = val;
+  return initialPageState;
+};
+
+const page = (state = initialPageState, action) => {
   if (action.type === PAGE_LAYOUT_LOAD_COMPLETE) {
     return Object.assign({}, state, action.payload);
   }
   return state;
 };
+
+
+//  model
+const user = (state = initialUserState, action) => {
+  if(action.type === USER_LOGIN_SUCCESSFUL){
+    return Object.assign({},state, action.payload)
+  }
+  return state
+}
+
 
 const rootReducer = combineReducers({ page });
 
