@@ -1,0 +1,11 @@
+{
+  "global": true,
+  "i18nresources": "i18nresources",
+  "imports": ["product", "pageContext", "site", "loaded", "imageRootUrl", "productVariantOptions", "cart", "links", "productTypes", "passwordPolicies", "user"],
+  "javascript": "main",
+  "jsEditable": true,
+  "name": "anotherWidget",
+  "version": 1,
+  "widgetFamily": "anotherWidget",
+  "widgetType": "anotherWidget"
+}
