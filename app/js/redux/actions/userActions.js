@@ -5,4 +5,12 @@
  * source code package.
  */
 
+import {USER_LOGIN_SUCCESSFUL} from "./actions";
+
+export function temp(){}
+
+export function userModelUpdated(user) {
+  return {type: USER_LOGIN_SUCCESSFUL, payload:{user}}
+}
+
 
