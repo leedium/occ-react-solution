@@ -5,7 +5,7 @@
  * source code package.
  */
 
-export const APP_INIT_OCC_PROPS = "app.init.occ.props";
+export const APP_INIT_OCC_PROPS = "app.init.vendor.props";
 
 export const PAGE_LAYOUT_LOAD_START = "page.layout.load.start";
 export const PAGE_LAYOUT_LOAD_COMPLETE = "page.layout.load.complete";

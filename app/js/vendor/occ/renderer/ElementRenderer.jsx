@@ -10,8 +10,8 @@
 import React, { Component } from "react";
 import ReactHtmlParser, { convertNodeToElement } from "react-html-parser";
 
-import ElementsMap from "../views/components/elements/ElementsMap";
-import AsyncElement from "../views/components/elements/AsyncElement";
+import ElementsMap from "../../../views/components/elements/ElementsMap";
+import AsyncElement from "../../../views/components/elements/AsyncElement";
 
 function looseJsonParse(obj) {
   // $FlowFixMe

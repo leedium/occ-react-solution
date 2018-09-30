@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import WidgetsMap from "../views/components/widgets/WidgetsMap";
+import WidgetsMap from "../../../views/components/widgets/WidgetsMap";
 
 const WidgetRenderer = props => {
   const { occProps } = props;

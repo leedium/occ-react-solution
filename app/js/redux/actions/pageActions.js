@@ -6,7 +6,7 @@
  */
 
 import axios from "axios";
-import { ENDPOINT_PAGE_LAYOUT } from "../constants";
+import { ENDPOINT_PAGE_LAYOUT } from "../../constants";
 import {
   PAGE_CHANGED,
   PAGE_LAYOUT_LOAD_COMPLETE,

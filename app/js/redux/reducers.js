@@ -6,7 +6,7 @@
  */
 
 import { combineReducers } from "redux";
-import * as Actions from "./actions";
+import * as Actions from "./actions/actions";
 
 const initialPageState = {
   pageLayout: null,

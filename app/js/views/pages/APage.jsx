@@ -10,8 +10,8 @@ import {connect} from "react-redux";
 import PropTypes from 'prop-types';
 
 import {PageLayoutType} from "../../types";
-import PageLayoutRenderer from "../../renderer/PageLayoutRenderer";
-import {pageLayoutLoadStart} from "../../redux/actionCreators";
+import PageLayoutRenderer from "../../vendor/occ/renderer/PageLayoutRenderer";
+import {pageLayoutLoadStart} from "../../redux/actions/pageActions";
 
 class APage extends Component {
   static propTypes = {

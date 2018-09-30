@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import Index from "./Index";
 import Context from "./Context";
 import store from "./redux/store";
+import occEventTransformer from './vendor/occ/eventTransformer';
 
 //  artificially create container
 const root = document.createElement("div");
@@ -47,6 +48,8 @@ define([
         widget
       }
     };
+
+    occEventTransformer(occProps);
 
     $.Topic(PubSub.topicNames.PAGE_VIEW_CHANGED).subscribe(() => {});
     ReactDOM.render(
