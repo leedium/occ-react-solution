@@ -10,8 +10,8 @@
 import React, { Component } from "react";
 import ReactHtmlParser, { convertNodeToElement } from "react-html-parser";
 
-import ElementsMap from "../views/components/elements/ElementsMap";
-import AsyncElement from "../views/components/elements/AsyncElement";
+import ElementsMap from "../../../views/components/elements/ElementsMap";
+import AsyncElement from "../../../views/components/elements/AsyncElement";
 
 function looseJsonParse(obj) {
   // $FlowFixMe
@@ -44,6 +44,7 @@ class ElementRenderer extends Component<Props, State> {
 
   injectElement = () => {
     const { widgetContext, widget } = this.props;
+
     const transform = (node, index) => {
       if (node.type === "comment") {
         return null;
@@ -72,10 +73,12 @@ class ElementRenderer extends Component<Props, State> {
           );
         }
       } else if (node.name === "a") {
-        console.log("a", node);
+        console.log("a - this will be replaced ", node);
+        //:todo add in the replacement for the occ link
       }
       return convertNodeToElement(node, index, transform);
     };
+
     const elementMarkup = ReactHtmlParser(widget.templateSrc, {
       decodeEntities: true,
       transform

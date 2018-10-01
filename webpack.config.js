@@ -1,6 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
-// var JavaScriptObfuscator = require('webpack-obfuscator');
+// const JavaScriptObfuscator = require('webpack-obfuscator');
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 const config = {
   // mode: 'development',
@@ -23,7 +25,13 @@ const config = {
     ccConstants: "ccConstants",
     ccRestClient: "ccRestClient",
     navigation: "navigation",
-    ccLogger: "ccLogger"
+    ccLogger: "ccLogger",
+    CCi18n: "CCi18n",
+    ccNumber: "ccNumber",
+    currencyHelper: "currencyHelper",
+    numberFormatHelper: "numberFormatHelper",
+    "ojs/ojcore": "ojs/ojcore",
+    "ojs/ojvalidation": "ojs/ojvalidation"
   },
   devServer: {
     hot: true,
@@ -45,10 +53,34 @@ const config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin()
+    // new BundleAnalyzerPlugin()
     // new JavaScriptObfuscator ({
     //   rotateUnicodeArray: true
     // }, [])
   ],
+  // optimization:{
+  //   splitChunks: {
+  //     chunks: 'all',
+  //     minSize: 30000,
+  //     maxSize: 0,
+  //     minChunks: 1,
+  //     maxAsyncRequests: 5,
+  //     maxInitialRequests: 3,
+  //     automaticNameDelimiter: '~',
+  //     name: true,
+  //     cacheGroups: {
+  //       vendors: {
+  //         test: /[\\/]node_modules[\\/]/,
+  //         priority: -10
+  //       },
+  //       default: {
+  //         minChunks: 2,
+  //         priority: -20,
+  //         reuseExistingChunk: true
+  //       }
+  //     }
+  //   }
+  // },
   module: {
     rules: [
       {

@@ -8,7 +8,7 @@
 
 import React from "react";
 
-import ElementRenderer from "../../../../renderer/ElementRenderer";
+import ElementRenderer from "../../../../vendor/occ/renderer/ElementRenderer";
 
 type Props = {
   widgetContext: any,

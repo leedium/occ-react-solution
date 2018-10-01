@@ -5,12 +5,14 @@
  * source code package.
  */
 
-import { createStore, compose, applyMiddleware } from "redux";
+import { createStore, compose, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import rootReducer from "./reducers";
+
+import page from "./reducers/pageReducer";
+import model from "./reducers/modelReducer";
 
 const store = createStore(
-  rootReducer,
+  combineReducers({ page, model }),
   compose(
     applyMiddleware(thunk),
     typeof window === "object" &&

@@ -75,6 +75,7 @@
     "prettier": "^1.14.3",
     "react-hot-loader": "^4.3.10",
     "react-test-renderer": "^16.5.2",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8",
     "webpack-obfuscator": "^0.18.0"

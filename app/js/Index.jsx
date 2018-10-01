@@ -15,47 +15,49 @@ import Home from "./views/pages/Home";
 import AsyncRoute from "./router/AsyncRoute";
 
 const Index = () => (
-  <Router>
-    <OCCProps.Consumer>
-      {occData => (
-        <RouterListener {...occData}>
-          <div>
-            <Route
-              exact
-              path="/"
-              component={props => <Home {...occData} {...props} />}
-            />
-            <Route
-              exact
-              path="/home"
-              component={props => (
-                <AsyncRoute
-                  {...occData}
-                  {...props}
-                  loadingImport={import(/* webpackChunkName: "main0" */
-                  /* webpackMode: "lazy-once" */
-                  "./views/pages/Home")}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/:article"
-              component={props => (
-                <AsyncRoute
-                  {...occData}
-                  {...props}
-                  loadingImport={import(/* webpackChunkName: "main0" */
-                  /* webpackMode: "lazy-once" */
-                  "./views/pages/Article")}
-                />
-              )}
-            />
-          </div>
-        </RouterListener>
-      )}
-    </OCCProps.Consumer>
-  </Router>
+  <React.Fragment>
+    <Router>
+      <OCCProps.Consumer>
+        {occData => (
+          <RouterListener {...occData}>
+            <div>
+              <Route
+                exact
+                path="/"
+                component={props => <Home {...occData} {...props} />}
+              />
+              <Route
+                exact
+                path="/home"
+                component={props => (
+                  <AsyncRoute
+                    {...occData}
+                    {...props}
+                    loadingImport={import(/* webpackChunkName: "main0" */
+                    /* webpackMode: "lazy-once" */
+                    "./views/pages/Home")}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/:article"
+                component={props => (
+                  <AsyncRoute
+                    {...occData}
+                    {...props}
+                    loadingImport={import(/* webpackChunkName: "main0" */
+                    /* webpackMode: "lazy-once" */
+                    "./views/pages/Article")}
+                  />
+                )}
+              />
+            </div>
+          </RouterListener>
+        )}
+      </OCCProps.Consumer>
+    </Router>
+  </React.Fragment>
 );
 
 export default Index;

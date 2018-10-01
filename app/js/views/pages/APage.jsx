@@ -7,27 +7,32 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import { PageLayoutType } from "../../types";
-import PageLayoutRenderer from "../../renderer/PageLayoutRenderer";
-import { pageLayoutLoadStart } from "../../redux/actionCreators";
+import PageLayoutRenderer from "../../vendor/occ/renderer/PageLayoutRenderer";
+import { pageLayoutLoadStart } from "../../redux/actions/pageActions";
 
 class APage extends Component {
   static propTypes = {
-    pageLayout: PageLayoutType
+    pageLayout: PageLayoutType,
+    pageLayoutLoad: PropTypes.func,
+    match: PropTypes.shape({
+      url: PropTypes.string
+    }).isRequired
   };
 
   static defaultProps = {
-    pageLayout: null
+    pageLayout: null,
+    pageLayoutLoad: PropTypes.func
   };
 
   state = {};
 
   componentDidMount() {
-    const { match, pageLayoutLoad } = this.props;
+    const { match, pageLayoutRequest } = this.props;
     const route = match.url;
-    pageLayoutLoad(route);
-    // console.log('6. component did mount', this.props, this.context);
+    pageLayoutRequest(route);
   }
 
   static getDerivedStateFromProps(nextProps) {
@@ -72,7 +77,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  pageLayoutLoad(payload) {
+  pageLayoutRequest(payload) {
     dispatch(pageLayoutLoadStart(payload));
   }
 });
