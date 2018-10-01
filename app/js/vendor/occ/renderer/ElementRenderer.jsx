@@ -44,6 +44,7 @@ class ElementRenderer extends Component<Props, State> {
 
   injectElement = () => {
     const { widgetContext, widget } = this.props;
+
     const transform = (node, index) => {
       if (node.type === "comment") {
         return null;
@@ -73,9 +74,11 @@ class ElementRenderer extends Component<Props, State> {
         }
       } else if (node.name === "a") {
         console.log("a - this will be replaced ", node);
+        //:todo add in the replacement for the occ link
       }
       return convertNodeToElement(node, index, transform);
     };
+
     const elementMarkup = ReactHtmlParser(widget.templateSrc, {
       decodeEntities: true,
       transform

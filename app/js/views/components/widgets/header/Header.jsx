@@ -1,26 +1,18 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+// @flow
 
-import { loginUserRequest } from "../../../../redux/actions/userActions";
+import React from "react";
+import ElementRenderer from "../../../../vendor/occ/renderer/ElementRenderer";
 
-class Header extends Component {
-  componentDidMount() {}
+type Props = {
+  widgetContext: any,
+  widget: any
+};
 
-  render() {
-    return <div>header</div>;
-  }
-}
+const Header = ({ widgetContext, widget }: Props) => (
+  <div>
+    <ElementRenderer widgetContext={widgetContext} widget={widget} />
+    <div className="occ-react-header-custom">hello</div>
+  </div>
+);
 
-const mapStateToProps = state => ({
-  user: state.model.user
-});
-const mapDispatchProps = dispatch => ({
-  login(loginObj) {
-    dispatch(loginUserRequest(loginObj));
-  }
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchProps
-)(Header);
+export default Header;

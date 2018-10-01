@@ -13,11 +13,9 @@ import OCCProps from "./Context";
 import RouterListener from "./router/RouterListener";
 import Home from "./views/pages/Home";
 import AsyncRoute from "./router/AsyncRoute";
-import Header from "./views/components/widgets/header/Header";
 
 const Index = () => (
   <React.Fragment>
-    <Header />
     <Router>
       <OCCProps.Consumer>
         {occData => (
