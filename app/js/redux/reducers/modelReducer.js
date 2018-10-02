@@ -7,10 +7,12 @@
 
 import {
   USER_LOGIN_SUCCESSFUL,
-  USER_LOGOUT_SUCCESSFUL
+  USER_LOGOUT_SUCCESSFUL,
+  USER_LOGIN_REQUESTED
 } from "../actions/actions";
 
 const initialModel = {
+  loginRequested: false,
   user: {},
   product: {},
   cart: {},
@@ -20,10 +22,13 @@ const initialModel = {
 //  model
 const modelReducer = (state = initialModel, action) => {
   switch (action.type) {
+    case USER_LOGIN_REQUESTED:
+      return Object.assign({}, state, {
+        loginRequested: !state.loginRequested
+      });
     case USER_LOGIN_SUCCESSFUL:
     case USER_LOGOUT_SUCCESSFUL:
       console.log("action", action.payload);
-
       return Object.assign({}, state, action.payload);
     default:
       return state;

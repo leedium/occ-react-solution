@@ -53,7 +53,7 @@ const OccImage = ({ elementConfig }: Props) => {
       {img}
     </a>
   ) : (
-    img
+    <div className="occ-react__image">{}</div>
   );
 };
 

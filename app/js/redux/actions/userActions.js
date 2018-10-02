@@ -13,6 +13,6 @@ export function userModelUpdated(user) {
   return { type: USER_LOGIN_SUCCESSFUL, payload: { user } };
 }
 
-export function loginUserRequest() {
-  return { type: USER_LOGIN_REQUESTED, payload: {} };
+export function loginUserRequest(occProps) {
+  return { type: USER_LOGIN_REQUESTED, payload: occProps };
 }
