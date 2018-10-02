@@ -30,7 +30,7 @@ const OccGenericText = ({ elementConfig, nodeName, widget }: Props) => {
   const formattedFonts = convertDashKeysToCamelCase(font.styles);
   const ElementNode = nodeName;
   return (
-    <ElementNode style={formattedFonts}>
+    <ElementNode style={formattedFonts} className="occ-react__generic-text">
       {widget.customTranslations[`text.${elementConfig.id}`]}
     </ElementNode>
   );
