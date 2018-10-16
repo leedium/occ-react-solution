@@ -17,10 +17,10 @@
     "user",
     "order"
   ],
-  "javascript": "bundle",
+  "javascript": "main",
   "jsEditable": true,
   "name": "[OCC React] - Web Content",
   "version": 1,
-  "widgetFamily": "occReactWebContent",
-  "widgetType": "occReactWebContent"
+  "widgetFamily": "reactWebContent",
+  "widgetType": "reactWebContent"
 }

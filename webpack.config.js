@@ -4,6 +4,8 @@ const webpack = require("webpack");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 
+const outputPath = "file/widget/occReact/js/";
+
 const config = {
   // mode: 'development',
   entry: {
@@ -12,10 +14,10 @@ const config = {
   devtool:
     process.env.NODE_ENV === "development" ? "cheap-eval-source-map" : false,
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, outputPath),
     filename: "bundle.js",
     chunkFilename: "[name].js",
-    publicPath: "/file/widget/anotherWidget/js/",
+    publicPath: outputPath,
     libraryTarget: "amd"
   },
   externals: {

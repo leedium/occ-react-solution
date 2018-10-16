@@ -55,9 +55,13 @@ class ElementRenderer extends Component<Props, State> {
           node.attribs["data-bind"].indexOf(`element: 'generic-text'`) ||
           node.attribs["data-bind"].indexOf(`element: 'rich-text'`) ||
           node.attribs["data-bind"].indexOf(`element: 'editorialLink'`) ||
+          node.attribs["data-bind"].indexOf(`element: 'react-image'`) ||
           node.attribs["data-bind"].indexOf(`element: 'image'`)
         ) {
           const data = looseJsonParse(`{${node.attribs["data-bind"]}}`);
+
+          console.log("data", data);
+
           const Element = ElementsMap[data.element];
           this.elementPromiseArray.push(Element);
 

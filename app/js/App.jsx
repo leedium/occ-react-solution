@@ -16,11 +16,6 @@ import Context from "./Context";
 import store from "./redux/store";
 import occEventTransformer from "./vendor/occ/eventTransformer";
 
-//  artificially create container
-const root = document.createElement("div");
-root.id = "root";
-document.body.prepend(root);
-
 window.occReact = {};
 
 define([
@@ -74,6 +69,11 @@ define([
         widget
       }
     };
+
+    //  artificially create container
+    const root = document.createElement("div");
+    root.id = "root";
+    document.getElementById("main").prepend(root);
 
     // console.log('CCi18n',CCi18n);
     // console.log('CCi18n.t',CCi18n.t('ns.common:resources.selectShippingMethodText'));

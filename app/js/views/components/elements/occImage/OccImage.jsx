@@ -15,6 +15,9 @@ type Props = {
     border: {},
     horizontalAlignment: {},
     id: string,
+    richText: {
+      content: string
+    },
     image: {
       altText: string,
       link: string,
@@ -26,16 +29,17 @@ type Props = {
 };
 
 const OccImage = ({ elementConfig }: Props) => {
-  const { image } = elementConfig;
+  console.log("Image Props", elementConfig);
+  const { image, richText } = elementConfig;
   const img = (
     <img
       style={convertDashKeysToCamelCase(
         Object.assign(
           { borderStyle: "solid", width: "100%" },
-          elementConfig.border,
-          elementConfig.horizontalAlignment,
+          elementConfig.border || {},
+          elementConfig.horizontalAlignment || {},
           {
-            ...Object.keys(elementConfig.padding).reduce((acc, b) => {
+            ...Object.keys(elementConfig.padding || []).reduce((acc, b) => {
               acc[b] = `${elementConfig.padding[b]}px`;
               return acc;
             }, {})
@@ -48,12 +52,21 @@ const OccImage = ({ elementConfig }: Props) => {
     />
   );
 
-  return image.link ? (
-    <a title={image.titleText} href={image.link}>
-      {img}
-    </a>
-  ) : (
-    <div className="occ-react__image">{}</div>
+  return (
+    <div>
+      {image.link ? (
+        <a title={image.titleText} href={image.link}>
+          {img}
+        </a>
+      ) : (
+        <div className="occ-react__image">{img}</div>
+      )}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: richText.content
+        }}
+      />
+    </div>
   );
 };
 

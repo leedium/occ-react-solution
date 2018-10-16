@@ -1,13 +1,13 @@
 {
   "configOptions": ["textbox"],
   "availableToAllWidgets": true,
-  "tag": "occ-react-text",
+  "tag": "occ-react-plain-text",
   "inline": false,
   "translations": [
     {
-      "description": "React implementation of the occ Rich Text Element",
+      "description": "React Text Element",
       "language": "en",
-      "title": "React Text"
+      "title": "[OCC React] - Plain Text"
     }
   ],
   "type": "fragment",

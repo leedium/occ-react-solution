@@ -3,11 +3,23 @@
   "global": false,
   "globalEnabled": false,
   "i18nresources": "i18nresources",
-  "imports": ["product", "pageContext", "site", "loaded", "imageRootUrl", "productVariantOptions", "cart", "links", "productTypes", "passwordPolicies", "user"],
+  "imports": [
+    "product",
+    "pageContext",
+    "site",
+    "loaded",
+    "imageRootUrl",
+    "productVariantOptions",
+    "cart",
+    "links",
+    "productTypes",
+    "passwordPolicies",
+    "user"
+  ],
   "javascript": "main",
   "jsEditable": true,
-  "name": "aHeader",
+  "name": "[OCC React] - Header",
   "version": 1,
-  "widgetFamily": "aHeader",
-  "widgetType": "aHeader"
+  "widgetFamily": "reactHeader",
+  "widgetType": "reactHeader"
 }
