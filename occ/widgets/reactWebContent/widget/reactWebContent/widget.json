@@ -1,0 +1,26 @@
+{
+  "availableToAllPages": true,
+  "global": false,
+  "globalEnabled": false,
+  "i18nresources": "i18nresources",
+  "imports": [
+    "product",
+    "pageContext",
+    "site",
+    "loaded",
+    "imageRootUrl",
+    "productVariantOptions",
+    "cart",
+    "links",
+    "productTypes",
+    "passwordPolicies",
+    "user",
+    "order"
+  ],
+  "javascript": "main",
+  "jsEditable": true,
+  "name": "[OCC React] - Web Content",
+  "version": 1,
+  "widgetFamily": "reactWebContent",
+  "widgetType": "reactWebContent"
+}

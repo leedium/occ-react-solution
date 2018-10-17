@@ -17,7 +17,6 @@ const OccLink = (link, label) => {
         rel="noopener noreferrer"
         href={link}
       >
-        BBE
         {label}
       </a>
     ) : (

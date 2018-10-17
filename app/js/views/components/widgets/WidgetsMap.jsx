@@ -9,9 +9,9 @@ import WebContent from "./webContent/WebContent";
 import Header from "./header/Header";
 
 const WidgetsMap = {
-  aWidget: WebContent,
-  webContent: WebContent,
-  aHeader: Header
+  reactWebContent: WebContent,
+  reactHeader: Header,
+  webContent: WebContent
 };
 
 export default WidgetsMap;

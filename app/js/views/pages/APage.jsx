@@ -30,9 +30,16 @@ class APage extends Component {
   state = {};
 
   componentDidMount() {
-    const { match, pageLayoutRequest } = this.props;
+    const { match, pageLayoutRequest, occProps } = this.props;
     const route = match.url;
-    pageLayoutRequest(route);
+    pageLayoutRequest({
+      path: `/${route}`,
+      headers: {
+        Authorization: `Bearer ${
+          occProps.dependencies.ccRestClient.tokenSecret
+        }`
+      }
+    });
   }
 
   static getDerivedStateFromProps(nextProps) {

@@ -11,7 +11,8 @@
 
 const WidgetsMap = {
   image: import("./occImage/OccImage"),
-  "rich-text": import("./occRichText/OccRichText"),
+  "react-image": import("./occImage/OccImage"),
+  "react-rich-text": import("./occRichText/OccRichText"),
   "generic-text": import("./occGenericText/OccGenericText"),
   editorialLink: import("./occRichText/OccRichText"),
   button: import(/* webpackChunkName: "Button" */ "./button/Button")
