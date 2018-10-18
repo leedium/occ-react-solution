@@ -6,6 +6,8 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 
 const outputPath = "file/widget/occReact/js/";
 
+const componentConfig = require("./componentConfig");
+
 const config = {
   // mode: 'development',
   entry: {
@@ -20,21 +22,7 @@ const config = {
     publicPath: outputPath,
     libraryTarget: "amd"
   },
-  externals: {
-    knockout: "knockout",
-    jquery: "jquery",
-    pubsub: "pubsub",
-    ccConstants: "ccConstants",
-    ccRestClient: "ccRestClient",
-    navigation: "navigation",
-    ccLogger: "ccLogger",
-    CCi18n: "CCi18n",
-    ccNumber: "ccNumber",
-    currencyHelper: "currencyHelper",
-    numberFormatHelper: "numberFormatHelper",
-    "ojs/ojcore": "ojs/ojcore",
-    "ojs/ojvalidation": "ojs/ojvalidation"
-  },
+  externals: componentConfig.dependencies,
   devServer: {
     hot: true,
     publicPath: "/public/",
