@@ -1,4 +1,4 @@
-# occ-react-component
+# occ-react-solution
 
 React Based Solution for Oracle Commerce Cloud
 
