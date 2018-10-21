@@ -5,8 +5,8 @@ React Based Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/
 - [React 16 (Flow)](https://reactjs.org/ "React")
 - [React Rputer 4](https://github.com/ReactTraining/react-router "React Router")
 - [React Redux](https://github.com/reduxjs/react-redux "React Redux")
-- [Webpack 4](https://webpack.js.org/ "Webapck") 
-- [Babel 7](https://babeljs.io/ "Babel 7")  . 
+- [Webpack 4](https://webpack.js.org/ "Webapck")
+- [Babel 7](https://babeljs.io/ "Babel 7")
 - [eslint](https://eslint.org/ "Eslint")
 
 ### Descriptions
@@ -65,7 +65,7 @@ React component will compile to this folder preserving the normal widget structu
 Add normal localized resource files here. The "/file" is needed to preserve the path strructure
 on the [OCC](https://docs.oracle.com/en/cloud/saas/commerce-cloud/index.html "Oracle Commer Cloud Portal") server.
 
-[Webpack](https://webpack.js.org/ "Webapck")  depending on how you split your bundles(dynamic imports) will create several files.
+[Webpack](https://webpack.js.org/ "Webapck") depending on how you split your bundles(dynamic imports) will create several files.
 
 #### occ/
 

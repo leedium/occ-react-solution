@@ -1,11 +1,11 @@
-/* eslint import/no-unresolved: [2, { ignore: ['\.img$'] }] */
-
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
  * defined in file 'LICENSE.txt', which is part of this
  * source code package.
  */
+
+/* eslint import/no-unresolved: [2, { ignore: ['\.img$'] }] */
 
 import React from "react";
 import ReactDOM from "react-dom";
@@ -74,11 +74,6 @@ define([
     const root = document.createElement("div");
     root.id = "root";
     document.getElementById("main").prepend(root);
-
-    // console.log('CCi18n',CCi18n);
-    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.selectShippingMethodText'));
-    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.welcome'));
-    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.wishlistPageLoadedText'));
 
     occEventTransformer(occProps);
 
