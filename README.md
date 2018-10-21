@@ -6,7 +6,7 @@ React Based Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/
 - [React Rputer 4](https://github.com/ReactTraining/react-router "React Router")
 - [React Redux](https://github.com/reduxjs/react-redux "React Redux")
 - [Webpack 4](https://webpack.js.org/ "Webapck")
-- [Babel 7](https://babeljs.io/ "Babel 7") .
+- [Babel 7](https://babeljs.io/ "Babel 7")
 - [eslint](https://eslint.org/ "Eslint")
 
 ### Descriptions
