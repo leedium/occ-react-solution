@@ -1,11 +1,11 @@
-// @flow
-
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
  * defined in file 'LICENSE.txt', which is part of this
  * source code package.
  */
+
+// @flow
 
 import React, { Component } from "react";
 import type { StatelessFunctionalComponent } from "react";

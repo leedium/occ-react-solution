@@ -1,4 +1,3 @@
-// @flow
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
@@ -6,6 +5,7 @@
  * source code package.
  */
 
+// @flow
 import React from "react";
 
 import ElementRenderer from "../../../../vendor/occ/renderer/ElementRenderer";
