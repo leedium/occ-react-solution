@@ -11,7 +11,7 @@ React Based Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/
 
 ### Descriptions
 
-This is a working proof of concept "quasi-headless" React-Redux Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud").
+This is a working proof-of-concept, "quasi-headless" React-Redux Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud").
 Using the Admin / Design View, you can create React based Web Content using custom React
 elements. Full design-view layouts are preserved.
 
