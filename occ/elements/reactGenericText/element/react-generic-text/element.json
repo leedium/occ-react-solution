@@ -1,0 +1,15 @@
+{
+  "configOptions": ["textBox", "fontPicker"],
+  "availableToAllWidgets": true,
+  "tag": "occ-react-generic-text",
+  "inline": false,
+  "translations": [
+    {
+      "description": "React Generic Text Element",
+      "language": "en",
+      "title": "[OCC React] - Generic Text"
+    }
+  ],
+  "type": "fragment",
+  "version": 1
+}
