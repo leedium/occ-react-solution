@@ -2,6 +2,8 @@
 
 [React](https://reactjs.org/ "React") Based Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
 
+##### OCC version 16+
+
 - [React 16 (Flow)](https://reactjs.org/ "React")
 - [React Router 4](https://github.com/ReactTraining/react-router "React Router")
 - [React Redux](https://github.com/reduxjs/react-redux "React Redux")
