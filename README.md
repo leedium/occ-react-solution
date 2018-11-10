@@ -1,6 +1,6 @@
 # occ-react-solution
 
-React Based Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
+[React](https://reactjs.org/ "React") Based Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
 
 - [React 16 (Flow)](https://reactjs.org/ "React")
 - [React Router 4](https://github.com/ReactTraining/react-router "React Router")
