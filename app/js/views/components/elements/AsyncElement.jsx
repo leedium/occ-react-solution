@@ -13,7 +13,7 @@
  * @company LEEDIUM
  * @createdBy davidlee
  * @contact david@leedium.com
- * @dateCreated 14/11/2018
+ * @dateUpdated; 14/11/2018
  * @description Proxy Element that receives a dynamically imported Component
  *              When the load is complete, the element is rendered on the page
  *              when the state property is updated.

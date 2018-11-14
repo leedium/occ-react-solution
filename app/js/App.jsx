@@ -7,15 +7,13 @@
  * source code package.
  */
 
-/* eslint import/no-unresolved: [2, { ignore: ['\.img$'] }] */
-
 /**
  * @project occ-react-solution
  * @file App.jsx
  * @company LEEDIUM
  * @createdBy davidlee
  * @contact david@leedium.com
- * @dateCreated 14/11/2018
+ * @dateUpdated; 14/11/2018
  * @description Entry file for bundle processing.
  *              Because OCC uses require.js AMD, the structure widget's main file
  *              must be preserved.

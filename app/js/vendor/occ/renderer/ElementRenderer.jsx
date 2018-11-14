@@ -7,6 +7,21 @@
 
 // @flow
 
+/**
+ * @project occ-react-solution
+ * @file ElementRenderer.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated 14/11/2018
+ * @description Element renderer compares the elements defined in each widget
+ *              and injects the associated React Component in it's place.
+ *              As all the mapped React Components are defined as dynamic imports
+ *              the load for a selected component happens in real time.
+ *              *See AsyncElement to see how the promise is implemented.
+ *
+ */
+
 import React, { Component } from "react";
 import ReactHtmlParser, { convertNodeToElement } from "react-html-parser";
 

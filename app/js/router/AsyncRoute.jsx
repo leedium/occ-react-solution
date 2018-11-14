@@ -11,7 +11,7 @@
  * @company LEEDIUM
  * @createdBy davidlee
  * @contact david@leedium.com
- * @dateCreated 14/11/2018
+ * @dateUpdated; 14/11/2018
  * @description This file acts as a proxy to asynchronously load the model for the  route
  *              before it is displayed.
  *
