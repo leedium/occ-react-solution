@@ -9,6 +9,17 @@
 // import OccGenericText from "./occGenericText/OccGenericText";
 // import OccImage from "./occImage/OccImage";
 
+
+/**
+ * @project occ-react-solution
+ * @file ElementsMap.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description Lookup hash to transform OCC elements into React Components
+ */
+
 const WidgetsMap = {
   image: import("./occImage/OccImage"),
   "react-image": import("./occImage/OccImage"),

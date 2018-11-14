@@ -5,6 +5,19 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file PageLayoutRenderer.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated 14/11/2018
+ * @description PageLayout renderer constructs the regions and their associated
+ *              areas, boundaries, and widgets on the page (rows, cols)
+ *
+ *              If no widgets defined then the view will not be updated.
+ */
+
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import RegionRenderer from "./RegionRenderer";

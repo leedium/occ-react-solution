@@ -1,3 +1,5 @@
+/* eslint import/no-unresolved: [2, { ignore: ['\.img$'] }] */
+
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
@@ -5,7 +7,27 @@
  * source code package.
  */
 
-/* eslint import/no-unresolved: [2, { ignore: ['\.img$'] }] */
+/**
+ * @project occ-react-solution
+ * @file App.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description Entry file for bundle processing.
+ *              Because OCC uses require.js AMD, the structure widget's main file
+ *              must be preserved.
+ *
+ *              occProps - property that contains both the injected occ dependenices
+ *                        as well as the injected ViewModel
+ *
+ *              To add more, define the dependencies you need in the webpack.config.js in the
+ *              externals map.
+ *
+ *              <Context.Provider> is used to inject the ooProps down through to child modules without
+ *              having to directly reference them.
+ *
+ */
 
 import React from "react";
 import ReactDOM from "react-dom";

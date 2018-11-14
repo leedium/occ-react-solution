@@ -5,6 +5,20 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file APage.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description Abstract Route View
+ *
+ *              The view is rendered of the OCC pageLayout model which is loaded when
+ *              the component is mounted.
+ *
+ */
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -29,6 +43,9 @@ class APage extends Component {
 
   state = {};
 
+  /**
+   * initiates a redux thunk to retrieve the layoutModel for this page
+   */
   componentDidMount() {
     const { match, pageLayoutRequest, occProps } = this.props;
     const route = match.url;
@@ -46,6 +63,12 @@ class APage extends Component {
     return nextProps;
   }
 
+  /**
+   * The layout regions are defined once the layoutModel is loaded.
+   * Transformations are applied and send to the PageLayout renderer for
+   * processing
+   * @returns {*}
+   */
   render() {
     let pageBody = [];
     const { pageLayout, occProps } = this.props;

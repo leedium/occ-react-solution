@@ -5,6 +5,20 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file AsyncRoute.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description This file acts as a proxy to asynchronously load the model for the  route
+ *              before it is displayed.
+ *
+ *              The injected module(loadingImport) itself is a the dynamic import which returns
+ *              a promise that updates the flag to render the display.
+ */
+
 import React, { Component } from "react";
 
 class AsyncRoute extends Component {

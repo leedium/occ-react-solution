@@ -7,6 +7,18 @@
 
 // @flow
 
+/**
+ * @project occ-react-solution
+ * @file AsyncElement.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description Proxy Element that receives a dynamically imported Component
+ *              When the load is complete, the element is rendered on the page
+ *              when the state property is updated.
+ */
+
 import React, { Component } from "react";
 import type { StatelessFunctionalComponent } from "react";
 

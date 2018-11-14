@@ -5,6 +5,18 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file WidgetRenderer.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated 14/11/2018
+ * @description Component renders widget to the page.
+ *              The OCCComponent is a assigned the result of the widget type
+ *              by it's typeId
+ */
+
 import React from "react";
 import WidgetsMap from "../../../views/components/widgets/WidgetsMap";
 

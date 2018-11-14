@@ -7,6 +7,16 @@
 
 // @flow
 
+/**
+ * @project occ-react-solution
+ * @file OccGenericText.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description React GenericText OCC port
+ */
+
 import React from "react";
 import { convertDashKeysToCamelCase } from "../../../../utils/utils";
 // import ReactHtmlParser from "react-html-parser";

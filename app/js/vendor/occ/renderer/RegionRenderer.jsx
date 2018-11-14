@@ -5,6 +5,17 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file RegionRenderer.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated 14/11/2018
+ * @description Renders an OCC page layout region as defined from the pageLayout
+ *              loaded in the previous cycle.
+ */
+
 import React from "react";
 import WidgetRenderer from "./WidgetRenderer";
 

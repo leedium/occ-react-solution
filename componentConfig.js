@@ -5,6 +5,16 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file Define the OCC and other require.js dependencies here
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description
+ */
+
 module.exports = {
   componentName: "occReactComponent",
   dependencies: {

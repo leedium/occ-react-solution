@@ -7,6 +7,16 @@
 
 // @flow
 
+/**
+ * @project occ-react-solution
+ * @file OccImage.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description React Image OCC port.
+ */
+
 import React from "react";
 import { convertDashKeysToCamelCase } from "../../../../utils/utils";
 

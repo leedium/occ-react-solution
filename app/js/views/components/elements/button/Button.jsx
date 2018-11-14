@@ -7,6 +7,16 @@
 
 // @flow
 
+/**
+ * @project occ-react-solution
+ * @file Button.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateUpdated; 14/11/2018
+ * @description React Button
+ */
+
 import React from "react";
 
 type Props = {
