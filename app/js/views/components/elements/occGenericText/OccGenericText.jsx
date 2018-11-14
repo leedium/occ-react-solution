@@ -1,10 +1,20 @@
-// @flow
-
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
  * defined in file 'LICENSE.txt', which is part of this
  * source code package.
+ */
+
+// @flow
+
+/**
+ * @project occ-react-solution
+ * @file OccGenericText.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 14/11/2018
+ * @description React GenericText OCC port
  */
 
 import React from "react";

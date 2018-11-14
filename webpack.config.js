@@ -1,8 +1,19 @@
+/*
+ * Copyright (c) 2018 LEEDIUM.
+ * This file is subject to the terms and conditions
+ * defined in file 'LICENSE.txt', which is part of this
+ * source code package.
+ */
+
 const path = require("path");
 const webpack = require("webpack");
 // const JavaScriptObfuscator = require('webpack-obfuscator');
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
+
+const outputPath = "file/widget/occReact/js/";
+
+const componentConfig = require("./componentConfig");
 
 const config = {
   // mode: 'development',
@@ -12,27 +23,13 @@ const config = {
   devtool:
     process.env.NODE_ENV === "development" ? "cheap-eval-source-map" : false,
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, outputPath),
     filename: "bundle.js",
     chunkFilename: "[name].js",
-    publicPath: "/file/widget/anotherWidget/js/",
+    publicPath: outputPath,
     libraryTarget: "amd"
   },
-  externals: {
-    knockout: "knockout",
-    jquery: "jquery",
-    pubsub: "pubsub",
-    ccConstants: "ccConstants",
-    ccRestClient: "ccRestClient",
-    navigation: "navigation",
-    ccLogger: "ccLogger",
-    CCi18n: "CCi18n",
-    ccNumber: "ccNumber",
-    currencyHelper: "currencyHelper",
-    numberFormatHelper: "numberFormatHelper",
-    "ojs/ojcore": "ojs/ojcore",
-    "ojs/ojvalidation": "ojs/ojvalidation"
-  },
+  externals: componentConfig.dependencies,
   devServer: {
     hot: true,
     publicPath: "/public/",

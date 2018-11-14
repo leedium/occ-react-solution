@@ -7,6 +7,30 @@
  * source code package.
  */
 
+/* eslint import/no-unresolved: [2, { ignore: ['\.img$'] }] */
+
+/**
+ * @project occ-react-solution
+ * @file App.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 14/11/2018
+ * @description Entry file for bundle processing.
+ *              Because OCC uses require.js AMD, the structure widget's main file
+ *              must be preserved.
+ *
+ *              occProps - property that contains both the injected occ dependenices
+ *                        as well as the injected ViewModel
+ *
+ *              To add more, define the dependencies you need in the webpack.config.js in the
+ *              externals map.
+ *
+ *              <Context.Provider> is used to inject the ooProps down through to child modules without
+ *              having to directly reference them.
+ *
+ */
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -15,11 +39,6 @@ import Index from "./Index";
 import Context from "./Context";
 import store from "./redux/store";
 import occEventTransformer from "./vendor/occ/eventTransformer";
-
-//  artificially create container
-const root = document.createElement("div");
-root.id = "root";
-document.body.prepend(root);
 
 window.occReact = {};
 
@@ -75,10 +94,10 @@ define([
       }
     };
 
-    // console.log('CCi18n',CCi18n);
-    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.selectShippingMethodText'));
-    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.welcome'));
-    // console.log('CCi18n.t',CCi18n.t('ns.common:resources.wishlistPageLoadedText'));
+    //  artificially create container
+    const root = document.createElement("div");
+    root.id = "root";
+    document.getElementById("main").prepend(root);
 
     occEventTransformer(occProps);
 

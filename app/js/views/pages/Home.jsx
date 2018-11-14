@@ -5,6 +5,16 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file Home.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 14/11/2018
+ * @description Route View for Homepage pages
+ */
+
 // import React from 'react';
 import APage from "./APage";
 

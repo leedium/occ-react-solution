@@ -5,6 +5,24 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file Index.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 14/11/2018
+ * @description Defines the ReactRouter for the Application
+ *              Here the React Context Consumer receives the injected props from the
+ *
+ *              occData is the ContextObject that contains the injected props from the Context.Provider
+ *
+ *              <RouterListener> - custom Higher Order Component(HOC) used to subscribe to
+ *                                 events when the route changes
+ *
+ *              dynamic imports are used to split out rout logic in the case a route is never accessed
+ */
+
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 

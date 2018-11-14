@@ -1,11 +1,11 @@
-// @flow
-
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
  * defined in file 'LICENSE.txt', which is part of this
  * source code package.
  */
+
+// @flow
 
 import React, { Component } from "react";
 import ReactHtmlParser, { convertNodeToElement } from "react-html-parser";
@@ -55,9 +55,13 @@ class ElementRenderer extends Component<Props, State> {
           node.attribs["data-bind"].indexOf(`element: 'generic-text'`) ||
           node.attribs["data-bind"].indexOf(`element: 'rich-text'`) ||
           node.attribs["data-bind"].indexOf(`element: 'editorialLink'`) ||
+          node.attribs["data-bind"].indexOf(`element: 'react-image'`) ||
           node.attribs["data-bind"].indexOf(`element: 'image'`)
         ) {
           const data = looseJsonParse(`{${node.attribs["data-bind"]}}`);
+
+          console.log("data", data);
+
           const Element = ElementsMap[data.element];
           this.elementPromiseArray.push(Element);
 

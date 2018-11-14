@@ -5,13 +5,23 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file ElementsMap.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 14/11/2018
+ * @description Lookup hash to transform OCC defined widgets into React Components
+ */
+
 import WebContent from "./webContent/WebContent";
 import Header from "./header/Header";
 
 const WidgetsMap = {
-  aWidget: WebContent,
-  webContent: WebContent,
-  aHeader: Header
+  reactWebContent: WebContent,
+  reactHeader: Header,
+  webContent: WebContent
 };
 
 export default WidgetsMap;

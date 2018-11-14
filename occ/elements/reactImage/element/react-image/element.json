@@ -5,9 +5,9 @@
   "inline": false,
   "translations": [
     {
-      "description": "React implementation of the occ Image Element",
+      "description": "React Image Element",
       "language": "en",
-      "title": "React Image"
+      "title": "[OCC React] - Image"
     }
   ],
   "type": "fragment",

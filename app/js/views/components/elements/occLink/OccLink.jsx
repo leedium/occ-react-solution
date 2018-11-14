@@ -5,6 +5,18 @@
  * source code package.
  */
 
+/**
+ * @project occ-react-solution
+ * @file OccLink.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 14/11/2018
+ * @description React Link OCC port.
+ *              the link definition determines if it's internal(router)
+ *              or external (http)
+ */
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -17,7 +29,6 @@ const OccLink = (link, label) => {
         rel="noopener noreferrer"
         href={link}
       >
-        BBE
         {label}
       </a>
     ) : (

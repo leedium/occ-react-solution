@@ -9,10 +9,23 @@
 // import OccGenericText from "./occGenericText/OccGenericText";
 // import OccImage from "./occImage/OccImage";
 
+
+/**
+ * @project occ-react-solution
+ * @file ElementsMap.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 14/11/2018
+ * @description Lookup hash to transform OCC elements into React Components
+ */
+
 const WidgetsMap = {
   image: import("./occImage/OccImage"),
-  "rich-text": import("./occRichText/OccRichText"),
+  "react-image": import("./occImage/OccImage"),
+  "react-rich-text": import("./occRichText/OccRichText"),
   "generic-text": import("./occGenericText/OccGenericText"),
+  "react-generic-text": import("./occGenericText/OccGenericText"),
   editorialLink: import("./occRichText/OccRichText"),
   button: import(/* webpackChunkName: "Button" */ "./button/Button")
 };

@@ -7,7 +7,6 @@
 
 define([], function() {
   return {
-    elementName: "react-text",
     onLoad: function(widget) {}
   };
 });

@@ -1,10 +1,22 @@
-// @flow
-
 /*
  * Copyright (c) 2018 LEEDIUM.
  * This file is subject to the terms and conditions
  * defined in file 'LICENSE.txt', which is part of this
  * source code package.
+ */
+
+// @flow
+
+/**
+ * @project occ-react-solution
+ * @file AsyncElement.jsx
+ * @company LEEDIUM
+ * @createdBy davidlee
+ * @contact david@leedium.com
+ * @dateCreated 14/11/2018
+ * @description Proxy Element that receives a dynamically imported Component
+ *              When the load is complete, the element is rendered on the page
+ *              when the state property is updated.
  */
 
 import React, { Component } from "react";

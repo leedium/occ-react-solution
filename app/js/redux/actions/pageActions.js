@@ -27,7 +27,7 @@ export function pageLayoutLoadComplete(pageLayout) {
   return { type: PAGE_LAYOUT_LOAD_COMPLETE, payload: { pageLayout } };
 }
 
-export function pageLayoutLoadStart(path, headers) {
+export function pageLayoutLoadStart({ path, headers }) {
   if (pageMap.has(path)) {
     return pageLayoutLoadComplete(pageMap.get(path));
   }
