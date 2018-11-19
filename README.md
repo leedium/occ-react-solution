@@ -71,7 +71,7 @@ on the [OCC](https://docs.oracle.com/en/cloud/saas/commerce-cloud/index.html "Or
 
 #### occ/
 
-[OCC](https://docs.oracle.com/en/cloud/saas/commerce-cloud/index.html "Oracle Commer Cloud Portal") representations for your [React](https://reactjs.org/ "React") widgets and elements. Use and install these to position you React components in the design view.
+[OCC](https://docs.oracle.com/en/cloud/saas/commerce-cloud/index.html "Oracle Commer Cloud Portal") representations for your [React](https://reactjs.org/ "React") widgets and elements. Use and install these to position your React components in the design view.
 
 ### Credits
 Thanks to @btholt for the React starter
