@@ -73,5 +73,9 @@ on the [OCC](https://docs.oracle.com/en/cloud/saas/commerce-cloud/index.html "Or
 
 [OCC](https://docs.oracle.com/en/cloud/saas/commerce-cloud/index.html "Oracle Commer Cloud Portal") representations for your [React](https://reactjs.org/ "React") widgets and elements. Use and install these to position your React components in the design view.
 
+### Realated
+
+If you would like to use standalone React components in your current UI, check out [occ-react-component](https://github.com/leedium/occ-react-component "OCC react component")
+
 ### Credits
 Thanks to @btholt for the React starter
