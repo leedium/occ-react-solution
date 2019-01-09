@@ -1,5 +1,22 @@
 # occ-react-solution
 
+## This solution is no longer maintained.  
+### For components inspired and replacing this project, please visit:   
+[occ-shared-resource-bundles](https://github.com/leedium/occ-shared-resource-bundles "webpack DLL bundle chunk component")   
+[occ-react-component](https://github.com/leedium/occ-react-component "OCC react component")  
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 [React](https://reactjs.org/ "React") Based Solution for [Oracle Commerce Cloud](https://cloud.oracle.com/en_US/commerce-cloud "Oracle Commerce Cloud")
 
 ##### OCC version 16+
